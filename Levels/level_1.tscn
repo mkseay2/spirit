@@ -1,16 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://ccqge3ngqc4y1"]
+[gd_scene load_steps=2 format=3 uid="uid://ccqge3ngqc4y1"]
 
-[ext_resource type="Texture2D" uid="uid://bia8g5wi6x8n5" path="res://PlayerCharacter/MelSpirit.png" id="2_6jwt3"]
-[ext_resource type="Script" path="res://PlayerCharacter/Player.gd" id="2_ljucy"]
+[ext_resource type="PackedScene" uid="uid://dfi3aa0asnuis" path="res://PlayerCharacter/player.tscn" id="1_8cjka"]
 
 [node name="Level1" type="Node2D"]
 
-[node name="Player" type="CharacterBody2D" parent="."]
-position = Vector2(137, 86)
-script = ExtResource("2_ljucy")
-metadata/_edit_group_ = true
+[node name="Player" parent="." instance=ExtResource("1_8cjka")]
+position = Vector2(80, 48)
 
-[node name="Sprite2D" type="Sprite2D" parent="Player"]
-position = Vector2(5, 6)
-scale = Vector2(1.625, 1.5)
-texture = ExtResource("2_6jwt3")
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+polygon = PackedVector2Array(0, 0, 24, 0, 16, 40, 24, 96, 24, 136, 16, 184, 0, 184, 0, 128, 0, 64)
