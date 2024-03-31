@@ -8,15 +8,16 @@ radius = 7.0
 height = 20.0
 
 [node name="Player" type="CharacterBody2D"]
+y_sort_enabled = true
 position = Vector2(2.08165e-12, 2.08165e-12)
 script = ExtResource("1_xgj18")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -10)
 scale = Vector2(1.625, 1.5)
 texture = ExtResource("2_wr5yu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 10)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_70tj8")
