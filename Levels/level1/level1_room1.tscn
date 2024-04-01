@@ -1,11 +1,11 @@
 [gd_scene load_steps=7 format=3 uid="uid://ccqge3ngqc4y1"]
 
-[ext_resource type="PackedScene" uid="uid://dfi3aa0asnuis" path="res://PlayerCharacter/player.tscn" id="1_8cjka"]
-[ext_resource type="Texture2D" uid="uid://fb7c1lwc1tym" path="res://TileSets/1_terrain.png" id="1_tag18"]
-[ext_resource type="Texture2D" uid="uid://b5ht72duwbgoo" path="res://TileSets/3_plants.png" id="2_x1umr"]
+[ext_resource type="Texture2D" uid="uid://fb7c1lwc1tym" path="res://TileSets/1_terrain.png" id="1_ne2in"]
+[ext_resource type="Texture2D" uid="uid://b5ht72duwbgoo" path="res://TileSets/3_plants.png" id="2_lmtqv"]
+[ext_resource type="PackedScene" uid="uid://dfi3aa0asnuis" path="res://PlayerCharacter/player.tscn" id="3_0t4ga"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fpudc"]
-texture = ExtResource("1_tag18")
+texture = ExtResource("1_ne2in")
 6:0/0 = 0
 6:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 6:0/0/physics_layer_0/angular_velocity = 0.0
@@ -1004,7 +1004,7 @@ texture = ExtResource("1_tag18")
 23:37/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bw7j3"]
-texture = ExtResource("2_x1umr")
+texture = ExtResource("2_lmtqv")
 16:0/size_in_atlas = Vector2i(2, 2)
 16:0/0 = 0
 16:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -1045,7 +1045,7 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_fpudc")
 sources/1 = SubResource("TileSetAtlasSource_bw7j3")
 
-[node name="Level1" type="Node2D"]
+[node name="Level1_Room1" type="Node2D"]
 y_sort_enabled = true
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -1060,8 +1060,5 @@ layer_2/name = "ysort"
 layer_2/y_sort_enabled = true
 layer_2/tile_data = PackedInt32Array(851973, 1310721, 0, 196629, 1310721, 0, 131073, 1179649, 0, 589835, 1179649, 0, 131086, 1179649, 2, 25, 1179649, 2, 983054, 1179649, 2)
 
-[node name="YsortEnable" type="Node2D" parent="."]
-y_sort_enabled = true
-
-[node name="Player" parent="YsortEnable" instance=ExtResource("1_8cjka")]
+[node name="Player" parent="." instance=ExtResource("3_0t4ga")]
 position = Vector2(80, 48)

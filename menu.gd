@@ -4,7 +4,7 @@ extends Control
 @onready var new_game_button = $VBoxContainer/NewGameButton as Button
 @onready var resume_game_button = $VBoxContainer/ResumeGameButton as Button
 @onready var exit_game_button = $VBoxContainer/ExitGameButton as Button
-@onready var start_level = preload("res://Levels/level_1.tscn") as PackedScene
+@onready var start_level = preload("res://Levels/level1/level1_room1.tscn") as PackedScene
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
