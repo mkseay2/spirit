@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://divfeqomqs06o"]
+[gd_scene load_steps=6 format=3 uid="uid://divfeqomqs06o"]
 
 [ext_resource type="Texture2D" uid="uid://fb7c1lwc1tym" path="res://TileSets/1_terrain.png" id="1_n15ai"]
+[ext_resource type="PackedScene" uid="uid://dfi3aa0asnuis" path="res://PlayerCharacter/player.tscn" id="3_puwq6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v8a4w"]
 texture = ExtResource("1_n15ai")
@@ -161,3 +162,6 @@ polygon = PackedVector2Array(0, 0, 448, 0, 448, 80, 488, 80, 488, 192, 448, 192,
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(-19.5, 136)
 shape = SubResource("RectangleShape2D_qjdcn")
+
+[node name="Player" parent="." instance=ExtResource("3_puwq6")]
+position = Vector2(25, 145)

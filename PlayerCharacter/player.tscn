@@ -28,6 +28,5 @@ limit_top = 0
 limit_right = 448
 limit_bottom = 288
 limit_smoothed = true
-position_smoothing_enabled = true
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
