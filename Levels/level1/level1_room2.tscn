@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://divfeqomqs06o"]
+[gd_scene load_steps=8 format=3 uid="uid://divfeqomqs06o"]
 
+[ext_resource type="Script" path="res://Levels/level1/level1_room2.gd" id="1_14dpg"]
 [ext_resource type="Texture2D" uid="uid://fb7c1lwc1tym" path="res://TileSets/1_terrain.png" id="1_n15ai"]
 [ext_resource type="PackedScene" uid="uid://dfi3aa0asnuis" path="res://PlayerCharacter/player.tscn" id="3_puwq6"]
 
@@ -142,7 +143,11 @@ sources/0 = SubResource("TileSetAtlasSource_v8a4w")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qjdcn"]
 size = Vector2(39, 110)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s5bqm"]
+size = Vector2(40, 110)
+
 [node name="Level1_Room2" type="Node2D"]
+script = ExtResource("1_14dpg")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_bruhk")
@@ -152,16 +157,25 @@ layer_0/tile_data = PackedInt32Array(262148, 1441792, 26, 0, 1441792, 26, 111411
 layer_1/name = "cavern"
 layer_1/tile_data = PackedInt32Array(14, 1310720, 26, 65550, 1310720, 27, 131086, 1310720, 26, 196622, 1310720, 27, 262158, 1310720, 26, 327694, 1310720, 27, 393230, 1310720, 26, 458766, 1310720, 27, 524302, 1310720, 26, 589838, 1310720, 27, 655374, 1310720, 26, 720910, 1310720, 27, 786446, 1310720, 26, 851982, 1310720, 27, 917518, 1310720, 26, 983054, 1310720, 27, 1048590, 1310720, 26, 1114126, 1310720, 27, 15, 1376256, 26, 65551, 1376256, 27, 131087, 1376256, 26, 196623, 1376256, 27, 262159, 1376256, 26, 327695, 1376256, 27, 393231, 1376256, 26, 458767, 1376256, 27, 524303, 1376256, 26, 589839, 1376256, 27, 655375, 1376256, 26, 720911, 1376256, 27, 786447, 1376256, 26, 851983, 1376256, 27, 917519, 1376256, 26, 983055, 1376256, 27, 1048591, 1376256, 26, 1114127, 1376256, 27, 10, 1572864, 26, 65546, 1572864, 27, 131082, 1572864, 26, 196618, 1572864, 27, 262154, 1572864, 26, 327690, 1572864, 27, 393226, 1572864, 26, 458762, 1572864, 27, 524298, 1572864, 26, 589834, 1572864, 27, 655370, 1572864, 26, 720906, 1572864, 27, 786442, 1572864, 26, 851978, 1572864, 27, 917514, 1572864, 26, 983050, 1572864, 27, 1048586, 1572864, 26, 1114122, 1572864, 27, 11, 1638400, 26, 65547, 1638400, 27, 131083, 1638400, 26, 196619, 1638400, 27, 262155, 1638400, 26, 327691, 1638400, 27, 393227, 1638400, 26, 458763, 1638400, 27, 524299, 1638400, 26, 589835, 1638400, 27, 655371, 1638400, 26, 720907, 1638400, 27, 786443, 1638400, 26, 851979, 1638400, 27, 917515, 1638400, 26, 983051, 1638400, 27, 1048587, 1638400, 26, 1114123, 1638400, 27)
 
+[node name="Player" parent="." instance=ExtResource("3_puwq6")]
+position = Vector2(25, 145)
+
 [node name="Collisions" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions"]
 polygon = PackedVector2Array(0, 0, 448, 0, 448, 80, 488, 80, 488, 192, 448, 192, 448, 288, 0, 288, 0, 192, -40, 192, -40, 80, 0, 80, 0, 0, -8, 0, -48, 72, -48, 200, -8, 296, 456, 296, 496, 200, 496, 72, 456, -8, 0, -8)
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Room1_Transition" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room1_Transition"]
 position = Vector2(-19.5, 136)
 shape = SubResource("RectangleShape2D_qjdcn")
 
-[node name="Player" parent="." instance=ExtResource("3_puwq6")]
-position = Vector2(25, 145)
+[node name="Room3_Transition" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room3_Transition"]
+position = Vector2(469, 136)
+shape = SubResource("RectangleShape2D_s5bqm")
+
+[connection signal="body_entered" from="Room1_Transition" to="." method="_on_room_1_transition_body_entered"]
+[connection signal="body_exited" from="Room1_Transition" to="." method="_on_room_1_transition_body_exited"]

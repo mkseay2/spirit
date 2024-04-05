@@ -1074,11 +1074,11 @@ position = Vector2(192, 96)
 position = Vector2(32, 0)
 polygon = PackedVector2Array(-32, 0, 416, 0, 416, 104, 448, 104, 448, 208, 416, 208, 416, 288, -32, 288, -32, 0, -32, -8, -40, -8, -40, 296, 424, 296, 456, 208, 456, 104, 424, -8, 424, -8, 16, -8, -32, -8)
 
-[node name="Level1_Room2_Transition" type="Area2D" parent="."]
+[node name="Room2_Transition" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Level1_Room2_Transition"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room2_Transition"]
 position = Vector2(464, 155)
 shape = SubResource("RectangleShape2D_s5bym")
 
-[connection signal="body_entered" from="Level1_Room2_Transition" to="." method="_on_level_1_room_2_transition_body_entered"]
-[connection signal="body_exited" from="Level1_Room2_Transition" to="." method="_on_level_1_room_2_transition_body_exited"]
+[connection signal="body_entered" from="Room2_Transition" to="." method="_on_room_2_transition_body_entered"]
+[connection signal="body_exited" from="Room2_Transition" to="." method="_on_room_2_transition_body_exited"]

@@ -7,19 +7,18 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	change_scene()
 
 
-func _on_level_1_room_2_transition_body_entered(body):
+func _on_room_2_transition_body_entered(body):
 	if body.has_method("player"):
-		print("entered")
 		Global.transition_scene = true
 
 
-func _on_level_1_room_2_transition_body_exited(body):
-	if body.has_method("player"):
-		Global.transition_scene = false
+#func _on_room_2_transition_body_exited(body):
+	#if body.has_method("player"):
+		#Global.transition_scene = false
 
 
 func change_scene():
