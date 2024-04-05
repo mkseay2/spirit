@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://ccqge3ngqc4y1"]
+[gd_scene load_steps=9 format=3 uid="uid://ccqge3ngqc4y1"]
 
+[ext_resource type="Script" path="res://Levels/level1/level1_room1.gd" id="1_l2yo7"]
 [ext_resource type="Texture2D" uid="uid://fb7c1lwc1tym" path="res://TileSets/1_terrain.png" id="1_ne2in"]
 [ext_resource type="Texture2D" uid="uid://b5ht72duwbgoo" path="res://TileSets/3_plants.png" id="2_lmtqv"]
 [ext_resource type="PackedScene" uid="uid://dfi3aa0asnuis" path="res://PlayerCharacter/player.tscn" id="3_0t4ga"]
@@ -1045,8 +1046,12 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_fpudc")
 sources/1 = SubResource("TileSetAtlasSource_bw7j3")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s5bym"]
+size = Vector2(32, 106)
+
 [node name="Level1_Room1" type="Node2D"]
 y_sort_enabled = true
+script = ExtResource("1_l2yo7")
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true
@@ -1061,10 +1066,19 @@ layer_2/y_sort_enabled = true
 layer_2/tile_data = PackedInt32Array(851973, 1310721, 0, 196629, 1310721, 0, 131073, 1179649, 0, 589835, 1179649, 0, 131086, 1179649, 2, 25, 1179649, 2, 983054, 1179649, 2, 1114136, 1179649, 2)
 
 [node name="Player" parent="." instance=ExtResource("3_0t4ga")]
-position = Vector2(80, 48)
+position = Vector2(192, 96)
 
 [node name="Collisions" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions"]
 position = Vector2(32, 0)
 polygon = PackedVector2Array(-32, 0, 416, 0, 416, 104, 448, 104, 448, 208, 416, 208, 416, 288, -32, 288, -32, 0, -32, -8, -40, -8, -40, 296, 424, 296, 456, 208, 456, 104, 424, -8, 424, -8, 16, -8, -32, -8)
+
+[node name="Level1_Room2_Transition" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Level1_Room2_Transition"]
+position = Vector2(464, 155)
+shape = SubResource("RectangleShape2D_s5bym")
+
+[connection signal="body_entered" from="Level1_Room2_Transition" to="." method="_on_level_1_room_2_transition_body_entered"]
+[connection signal="body_exited" from="Level1_Room2_Transition" to="." method="_on_level_1_room_2_transition_body_exited"]
