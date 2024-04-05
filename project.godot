@@ -14,6 +14,10 @@ config/name="Spirit"
 run/main_scene="res://menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 
+[autoload]
+
+Global="*res://Levels/global.gd"
+
 [display]
 
 window/size/viewport_width=320
