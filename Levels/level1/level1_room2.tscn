@@ -179,3 +179,4 @@ shape = SubResource("RectangleShape2D_s5bqm")
 
 [connection signal="body_entered" from="Room1_Transition" to="." method="_on_room_1_transition_body_entered"]
 [connection signal="body_exited" from="Room1_Transition" to="." method="_on_room_1_transition_body_exited"]
+[connection signal="body_entered" from="Room3_Transition" to="." method="_on_room_3_transition_body_entered"]
