@@ -39,6 +39,10 @@ offset_bottom = 50.5
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="ResumeGameButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Resume Game"
+
 [node name="NewGameButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "New Game"
