@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bvnhtw7xarue"]
 
-[ext_resource type="Script" path="res://menu.gd" id="1_mpcbi"]
-[ext_resource type="Texture2D" uid="uid://bdnmo2tc2flt7" path="res://Designs/ghost.jpeg" id="2_mvg1l"]
+[ext_resource type="Script" path="res://UI/menu.gd" id="1_ky1hu"]
+[ext_resource type="Texture2D" uid="uid://bdnmo2tc2flt7" path="res://Designs/ghost.jpeg" id="2_vcxhm"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -10,7 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_mpcbi")
+script = ExtResource("1_ky1hu")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -23,7 +23,7 @@ grow_vertical = 2
 [node name="Ghost" type="Sprite2D" parent="TextureRect"]
 position = Vector2(159.5, 90)
 scale = Vector2(0.438859, 0.434783)
-texture = ExtResource("2_mvg1l")
+texture = ExtResource("2_vcxhm")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://teb0xat7t3mq"
-path="res://.godot/imported/Caveman.png-8d373dbe4667d219b85b7e8f78d77021.ctex"
+uid="uid://bp7esbfdy3da6"
+path="res://.godot/imported/SlugOBot.png-ea299ded2b54ccca2c77b701a17b558b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://EnemyDesigns/Caveman.png"
-dest_files=["res://.godot/imported/Caveman.png-8d373dbe4667d219b85b7e8f78d77021.ctex"]
+source_file="res://Designs/Enemies/SlugOBot.png"
+dest_files=["res://.godot/imported/SlugOBot.png-ea299ded2b54ccca2c77b701a17b558b.ctex"]
 
 [params]
 

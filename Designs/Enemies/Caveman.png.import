@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c34sepr2f1inp"
-path="res://.godot/imported/Gunner.png-1660d547c86e493d11a1dc547f3625fb.ctex"
+uid="uid://teb0xat7t3mq"
+path="res://.godot/imported/Caveman.png-3c0be18712237cff39eadbd6eb87ce88.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://EnemyDesigns/Gunner.png"
-dest_files=["res://.godot/imported/Gunner.png-1660d547c86e493d11a1dc547f3625fb.ctex"]
+source_file="res://Designs/Enemies/Caveman.png"
+dest_files=["res://.godot/imported/Caveman.png-3c0be18712237cff39eadbd6eb87ce88.ctex"]
 
 [params]
 
