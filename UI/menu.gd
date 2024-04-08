@@ -2,7 +2,6 @@ class_name MainMenu
 extends Control
 
 @onready var new_game_button = $VBoxContainer/NewGameButton as Button
-@onready var resume_game_button = $VBoxContainer/ResumeGameButton as Button
 @onready var exit_game_button = $VBoxContainer/ExitGameButton as Button
 @onready var start_level = preload("res://Levels/level1/level1_room1.tscn") as PackedScene
 
