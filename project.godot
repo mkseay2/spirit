@@ -11,12 +11,12 @@ config_version=5
 [application]
 
 config/name="Spirit"
-run/main_scene="res://menu.tscn"
+run/main_scene="res://UI/menu.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 
 [autoload]
 
-Global="*res://Levels/global.gd"
+Global="*res://global.gd"
 
 [display]
 

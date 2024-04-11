@@ -1081,4 +1081,3 @@ position = Vector2(464, 155)
 shape = SubResource("RectangleShape2D_s5bym")
 
 [connection signal="body_entered" from="Room2_Transition" to="." method="_on_room_2_transition_body_entered"]
-[connection signal="body_exited" from="Room2_Transition" to="." method="_on_room_2_transition_body_exited"]
