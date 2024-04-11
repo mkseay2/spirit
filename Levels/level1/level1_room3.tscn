@@ -158,9 +158,9 @@ layer_0/tile_data = PackedInt32Array(262148, 1441792, 26, 0, 1441792, 26, 111411
 [node name="Player" parent="." instance=ExtResource("3_svj3e")]
 position = Vector2(40, 144)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="Collisions" type="StaticBody2D" parent="."]
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions"]
 polygon = PackedVector2Array(0, 0, 448, 0, 448, 96, 480, 96, 480, 192, 448, 192, 448, 288, 0, 288, 0, 192, -32, 192, -32, 96, 0, 96, 0, 0, -8, 0, -40, 88, -40, 200, -8, 296, 456, 296, 488, 200, 488, 88, 456, -8, 0, -8)
 
 [node name="Room2_Transition" type="Area2D" parent="."]

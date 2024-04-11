@@ -17,21 +17,12 @@ func _process(_delta):
 func _on_room_2_transition_body_entered(body):
 	if body.has_method("player"):
 		Global.transition_scene = true
-		Global.transition_backwards = true
-
-
-func _on_level_2_transition_body_entered(body):
-	if body.has_method("player"):
-		Global.transition_scene = true
 		Global.transition_backwards = false
 
 
 func change_scene():
 	if Global.transition_scene == true:
-		if Global.current_scene == "level1_room3":
-			if Global.transition_backwards == true:
-				get_tree().change_scene_to_file("res://Levels/level1/level1_room2.tscn")
-				Global.finish_change_scene("level1_room2")
-			else:
-				get_tree().change_scene_to_file("res://Levels/level2/level2_room1.tscn")
-				Global.finish_change_scene("level2_room1")
+		if Global.current_scene == "level2_room1":
+			if Global.transition_backwards == false:
+				get_tree().change_scene_to_file("res://Levels/level2/level2_room2.tscn")
+				Global.finish_change_scene("level2_room2")
