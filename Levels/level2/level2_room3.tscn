@@ -23,7 +23,6 @@ sources/0 = SubResource("TileSetAtlasSource_8lp05")
 [node name="Level2Room3" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
-position = Vector2(-1104, 40)
 tile_set = SubResource("TileSet_ks3c5")
 format = 2
 layer_0/name = "Main"
