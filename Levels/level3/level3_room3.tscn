@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://4dd62vcujryf"]
+[gd_scene load_steps=7 format=3 uid="uid://4dd62vcujryf"]
 
 [ext_resource type="Script" path="res://Levels/level3/level3_room3.gd" id="1_vjl2g"]
 [ext_resource type="Texture2D" uid="uid://b4t6cphiom83f" path="res://TileSets/SciFi_DungeonTileset16x16_0x72Like.png" id="1_wi70m"]
@@ -236,6 +236,9 @@ texture = ExtResource("1_wi70m")
 [sub_resource type="TileSet" id="TileSet_oy4p7"]
 sources/0 = SubResource("TileSetAtlasSource_knh0r")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x1i0c"]
+size = Vector2(34, 146)
+
 [node name="Level3Room3" type="Node2D"]
 script = ExtResource("1_vjl2g")
 
@@ -246,3 +249,16 @@ layer_0/tile_data = PackedInt32Array(0, 327680, 1, 65536, 327680, 1, 131072, 327
 
 [node name="Player" parent="." instance=ExtResource("3_i52c6")]
 position = Vector2(32, 144)
+
+[node name="Collisions" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions"]
+polygon = PackedVector2Array(0, 0, 448, 0, 448, 288, 0, 288, 0, 216, -32, 216, -32, 72, 0, 72, 0, 0, -8, 0, -40, 64, -40, 224, -8, 296, 456, 296, 456, -8, 0, -8)
+
+[node name="Room2_Transition" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room2_Transition"]
+position = Vector2(-17, 143)
+shape = SubResource("RectangleShape2D_x1i0c")
+
+[connection signal="body_entered" from="Room2_Transition" to="." method="_on_room_2_transition_body_entered"]
