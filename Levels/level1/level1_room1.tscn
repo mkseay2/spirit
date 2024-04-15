@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://ccqge3ngqc4y1"]
+[gd_scene load_steps=10 format=3 uid="uid://ccqge3ngqc4y1"]
 
 [ext_resource type="Script" path="res://Levels/level1/level1_room1.gd" id="1_l2yo7"]
 [ext_resource type="Texture2D" uid="uid://fb7c1lwc1tym" path="res://TileSets/1_terrain.png" id="1_ne2in"]
 [ext_resource type="Texture2D" uid="uid://b5ht72duwbgoo" path="res://TileSets/3_plants.png" id="2_lmtqv"]
 [ext_resource type="PackedScene" uid="uid://dfi3aa0asnuis" path="res://PlayerCharacter/player.tscn" id="3_0t4ga"]
+[ext_resource type="PackedScene" uid="uid://c10hoyrk2h03y" path="res://Enemies/caveman.tscn" id="5_ysv0x"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fpudc"]
 texture = ExtResource("1_ne2in")
@@ -1079,5 +1080,8 @@ polygon = PackedVector2Array(-32, 0, 416, 0, 416, 104, 448, 104, 448, 208, 416, 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Room2_Transition"]
 position = Vector2(464, 155)
 shape = SubResource("RectangleShape2D_s5bym")
+
+[node name="Caveman" parent="." instance=ExtResource("5_ysv0x")]
+position = Vector2(104, 96)
 
 [connection signal="body_entered" from="Room2_Transition" to="." method="_on_room_2_transition_body_entered"]
