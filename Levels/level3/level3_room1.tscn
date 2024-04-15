@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cqyqk1wgj38us"]
+[gd_scene load_steps=5 format=3 uid="uid://cqyqk1wgj38us"]
 
-[ext_resource type="Texture2D" uid="uid://ppai2c83rkqh" path="res://TileSets/SciFi_DungeonTileset16x16_0x72Like.png" id="1_j71dc"]
+[ext_resource type="Script" path="res://Levels/level3/level3_room1.gd" id="1_gjvhy"]
+[ext_resource type="Texture2D" uid="uid://b4t6cphiom83f" path="res://TileSets/SciFi_DungeonTileset16x16_0x72Like.png" id="1_j71dc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vkgrw"]
 texture = ExtResource("1_j71dc")
@@ -235,6 +236,7 @@ texture = ExtResource("1_j71dc")
 sources/0 = SubResource("TileSetAtlasSource_vkgrw")
 
 [node name="Level3Room1" type="Node2D"]
+script = ExtResource("1_gjvhy")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_wp1ah")
