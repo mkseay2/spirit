@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://dfi3aa0asnuis"]
+[gd_scene load_steps=5 format=3 uid="uid://dfi3aa0asnuis"]
 
 [ext_resource type="Script" path="res://PlayerCharacter/Player.gd" id="1_xgj18"]
 [ext_resource type="Texture2D" uid="uid://bia8g5wi6x8n5" path="res://PlayerCharacter/MelSpirit.png" id="2_wr5yu"]
@@ -7,12 +7,14 @@
 radius = 7.0
 height = 20.0
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dru1k"]
+radius = 16.0
+height = 40.0
+
 [node name="Player" type="CharacterBody2D"]
 y_sort_enabled = true
-position = Vector2(2.08165e-12, 2.08165e-12)
 collision_layer = 3
 script = ExtResource("1_xgj18")
-metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -10)
@@ -31,3 +33,9 @@ limit_bottom = 288
 limit_smoothed = true
 drag_horizontal_enabled = true
 drag_vertical_enabled = true
+
+[node name="player_hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player_hitbox"]
+position = Vector2(-1, -11)
+shape = SubResource("CapsuleShape2D_dru1k")
