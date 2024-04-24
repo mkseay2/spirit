@@ -23,4 +23,19 @@ func _process(delta):
 
 func updateBlueCount():
 	blueCount += 1
+	blueCountLabel.text = "%d" % blueCount
+
+
+func updateRedCount():
+	redCount += 1
+	redCountLabel.text = "%d" % redCount
+
+func updateGreenCount():
+	greenCount += 1
+	greenCountLabel.text = "%d" % greenCount
+
+func updateYellowCount():
+	yellowCount += 1
+	yellowCountLabel.text = "%d" % yellowCount
+
 	
