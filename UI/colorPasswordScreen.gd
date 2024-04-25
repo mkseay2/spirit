@@ -44,5 +44,3 @@ func _on_green_button_pressed():
 	pass # Replace with function body.
 
 
-func _on_blue_button_pressed():
-	pass # Replace with function body.
