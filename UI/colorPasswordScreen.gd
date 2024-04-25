@@ -6,7 +6,7 @@ var greenCount = 0
 var yellowCount = 0
 var redCount = 0
 
-var blueFlag = 0
+var blueFlag = 1
 var greenFlag = 0
 var redFlag = 0
 var yellowFlag = 0
@@ -26,6 +26,7 @@ func updateRedCount(value):
 	redCount += value
 	redCountLabel.text = "Red: %d" % redCount
 
+
 func updateGreenCount(value):
 	greenCount += value
 	greenCountLabel.text = "Green: %d" % greenCount
@@ -38,16 +39,52 @@ func updateYellowCount(value):
 	
 
 
-func _on_yellow_button_pressed():
-	pass # Replace with function body.
 
 
 
-func _on_red_button_pressed():
+
+func _on_1_button_pressed():
 	pass # Replace with function body.
 	
 
-func _on_green_button_pressed():
+func _on_4_button_pressed():
 	pass # Replace with function body.
 
 
+func _on_7_button_pressed():
+	pass # Replace with function body.
+
+
+func _on_9_button_pressed():
+	pass # Replace with function body.
+	
+
+
+func _on_6_button_pressed():
+	pass # Replace with function body.
+
+
+func _on_3_button_pressed():
+	pass # Replace with function body.
+	
+
+
+func _on_2_button_pressed():
+	pass # Replace with function body.
+
+
+func _on_5_button_pressed():
+	pass # Replace with function body.
+	
+
+
+func _on_8_button_pressed():
+	pass # Replace with function body.
+
+
+func _on_0_button_pressed():
+	pass # Replace with function body.
+
+
+func _on_check_button_pressed():
+	pass # Replace with function body.
