@@ -44,47 +44,110 @@ func updateYellowCount(value):
 
 
 func _on_1_button_pressed():
-	pass # Replace with function body.
+	if blueFlag == 1:
+		updateBlueCount(1)
+	if greenFlag == 1:
+		updateGreenCount(1)
+	if redFlag == 1:
+		updateRedCount(1)
+	if yellowFlag == 1:
+		updateYellowCount(1)
 	
 
 func _on_4_button_pressed():
-	pass # Replace with function body.
-
+	if blueFlag == 1:
+		updateBlueCount(1)
+	if greenFlag == 1:
+		updateGreenCount(1)
+	if redFlag == 1:
+		updateRedCount(1)
+	if yellowFlag == 1:
+		updateYellowCount(1)
 
 func _on_7_button_pressed():
-	pass # Replace with function body.
-
-
+	if blueFlag == 1:
+		updateBlueCount(1)
+	if greenFlag == 1:
+		updateGreenCount(1)
+	if redFlag == 1:
+		updateRedCount(1)
+	if yellowFlag == 1:
+		updateYellowCount(1)
+	
 func _on_9_button_pressed():
-	pass # Replace with function body.
+	if blueFlag == 1:
+		updateBlueCount(1)
+	if greenFlag == 1:
+		updateGreenCount(1)
+	if redFlag == 1:
+		updateRedCount(1)
+	if yellowFlag == 1:
+		updateYellowCount(1)
 	
 
-
 func _on_6_button_pressed():
-	pass # Replace with function body.
+	if blueFlag == 1:
+		updateBlueCount(1)
+	if greenFlag == 1:
+		updateGreenCount(1)
+	if redFlag == 1:
+		updateRedCount(1)
+	if yellowFlag == 1:
+		updateYellowCount(1)
 
 
 func _on_3_button_pressed():
-	pass # Replace with function body.
-	
+	if blueFlag == 1:
+		updateBlueCount(1)
+	if greenFlag == 1:
+		updateGreenCount(1)
+	if redFlag == 1:
+		updateRedCount(1)
+	if yellowFlag == 1:
+		updateYellowCount(1)
 
 
 func _on_2_button_pressed():
-	pass # Replace with function body.
-
+	if blueFlag == 1:
+		updateBlueCount(1)
+	if greenFlag == 1:
+		updateGreenCount(1)
+	if redFlag == 1:
+		updateRedCount(1)
+	if yellowFlag == 1:
+		updateYellowCount(1)
 
 func _on_5_button_pressed():
-	pass # Replace with function body.
+	if blueFlag == 1:
+		updateBlueCount(1)
+	if greenFlag == 1:
+		updateGreenCount(1)
+	if redFlag == 1:
+		updateRedCount(1)
+	if yellowFlag == 1:
+		updateYellowCount(1)
 	
 
-
 func _on_8_button_pressed():
-	pass # Replace with function body.
-
+	if blueFlag == 1:
+		updateBlueCount(1)
+	if greenFlag == 1:
+		updateGreenCount(1)
+	if redFlag == 1:
+		updateRedCount(1)
+	if yellowFlag == 1:
+		updateYellowCount(1)
+	
 
 func _on_0_button_pressed():
-	pass # Replace with function body.
-
+	if blueFlag == 1:
+		updateBlueCount(1)
+	if greenFlag == 1:
+		updateGreenCount(1)
+	if redFlag == 1:
+		updateRedCount(1)
+	if yellowFlag == 1:
+		updateYellowCount(1)
 
 func _on_check_button_pressed():
 	if blueFlag == 1:
