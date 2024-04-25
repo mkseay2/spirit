@@ -87,4 +87,34 @@ func _on_0_button_pressed():
 
 
 func _on_check_button_pressed():
-	pass # Replace with function body.
+	if blueFlag == 1:
+		if blueCount == 8:
+			blueCountLabel.text = "Blue: Good"
+			blueFlag = 0
+			greenFlag = 1
+		elif blueCount != 8:
+			blueCountLabel.text = "Blue: Nope"
+			blueCount = 0
+	elif greenFlag == 1:
+		if greenCount == 4:
+			greenCountLabel.text = "Green: Good"
+			greenFlag = 0
+			redFlag = 1
+		elif greenCount != 4:
+			greenCountLabel.text = "Green: Nope"
+			greenCount = 0
+	elif redFlag == 1:
+		if redCount == 6:
+			redCountLabel.text = "Red: Good"
+			redFlag = 0
+			yellowFlag = 1
+		elif redCount != 6:
+			redCountLabel.text = "Red: Nope"
+			redCount = 0
+	elif yellowFlag == 1:
+		if yellowCount == 2:
+			yellowCountLabel.text = "Yellow: Good"
+			yellowFlag = 0
+		elif yellowCount != 2:
+			yellowCount.text = "Yellow: Nope"
+			yellowCount = 0
