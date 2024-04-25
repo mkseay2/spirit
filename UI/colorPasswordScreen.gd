@@ -6,10 +6,10 @@ var greenCount = 0
 var yellowCount = 0
 var redCount = 0
 
-@onready var blueCountLabel
-@onready var redCountLabel
-@onready var greenCountLabel
-@onready var yellowCountLabel
+@onready var blueCountLabel = $ColorPasswordScreen/TextureRect2/ColorDisplay/ColorUI/BlueLabel
+@onready var redCountLabel = $ColorPasswordScreen/TextureRect2/ColorDisplay/ColorUI/redLabel
+@onready var greenCountLabel = $ColorPasswordScreen/TextureRect2/ColorDisplay/ColorUI/GreenLabel
+@onready var yellowCountLabel = $ColorPasswordScreen/TextureRect2/ColorDisplay/ColorUI/YellowLabel
 
 func updateBlueCount():
 	blueCount += 1
