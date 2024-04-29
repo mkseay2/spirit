@@ -3,6 +3,8 @@ extends Node
 
 var current_scene = "level1_room1"
 var transition_scene = false
+var player_health = 100
+var player_alive = true
 
 # used to determine whether the player is going to the next room 
 # or the previous room

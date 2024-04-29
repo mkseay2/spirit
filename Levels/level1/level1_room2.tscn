@@ -165,10 +165,10 @@ position = Vector2(25, 145)
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions"]
 polygon = PackedVector2Array(0, 0, 448, 0, 448, 80, 488, 80, 488, 192, 448, 192, 448, 288, 0, 288, 0, 192, -40, 192, -40, 80, 0, 80, 0, 0, -8, 0, -48, 72, -48, 200, -8, 296, 456, 296, 496, 200, 496, 72, 456, -8, 0, -8)
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Collisions"]
+[node name="Cavern_Collision1" type="CollisionPolygon2D" parent="Collisions"]
 polygon = PackedVector2Array(168, 288, 168, 232, 168, 208, 184, 192, 232, 192, 248, 208, 248, 288, 168, 288, 168, 296, 256, 296, 256, 200, 240, 184, 176, 184, 160, 200, 160, 288)
 
-[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Collisions"]
+[node name="Cavern_Collision2" type="CollisionPolygon2D" parent="Collisions"]
 polygon = PackedVector2Array(168, 0, 168, 72, 192, 88, 232, 88, 248, 72, 248, 0, 168, 0, 168, -8, 256, -8, 256, 80, 232, 96, 192, 96, 160, 80, 160, 0)
 
 [node name="Room1_Transition" type="Area2D" parent="."]

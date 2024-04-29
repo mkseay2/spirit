@@ -23,3 +23,15 @@ func _on_detection_area_body_exited(body):
 	if body.has_method("player"):
 		chase_player = false
 		player = null
+
+
+func enemy():
+	pass
+
+
+func _on_enemy_hitbox_body_entered(body):
+	pass # Replace with function body.
+
+
+func _on_enemy_hitbox_body_exited(body):
+	pass # Replace with function body.
