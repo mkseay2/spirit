@@ -104,7 +104,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_amkf6")
 }],
-"loop": true,
+"loop": false,
 "name": &"attack_left",
 "speed": 5.0
 }, {
@@ -124,7 +124,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_nrw1v")
 }],
-"loop": true,
+"loop": false,
 "name": &"attack_right",
 "speed": 5.0
 }, {
@@ -144,7 +144,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_vtv3a")
 }],
-"loop": true,
+"loop": false,
 "name": &"attack_up",
 "speed": 5.0
 }, {
@@ -203,7 +203,7 @@ shape = SubResource("CapsuleShape2D_dru1k")
 position = Vector2(-2.38419e-07, -14)
 scale = Vector2(1.54, 1.54)
 sprite_frames = SubResource("SpriteFrames_rifl2")
-animation = &"walk_right"
+animation = &"attack_up"
 
 [connection signal="body_entered" from="player_hitbox" to="." method="_on_player_hitbox_body_entered"]
 [connection signal="body_exited" from="player_hitbox" to="." method="_on_player_hitbox_body_exited"]

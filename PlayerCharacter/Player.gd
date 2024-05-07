@@ -1,23 +1,27 @@
 extends CharacterBody2D
 
 @export var speed = 100
+@onready var anim = $AnimatedSprite2D
 var enemy_in_attack_range = false
 var enemy_cool_down = false
 var prev_dir = "right"
-
+var state = "move"
 
 
 func _physics_process(_delta):
-	get_input()
-	move_and_slide()
+	match state:
+		"move":
+			move_state()
+			move_and_slide()
+		"attack":
+			attack_state()
+	
 	process_enemy_attack()
 
 
-func get_input():
+func move_state():
 	# uses the four arrow keys
 	var input_direction = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
-	var anim = $AnimatedSprite2D
-	
 	velocity = input_direction.normalized() * speed
 	
 	if Input.is_action_just_pressed("ui_left"):
@@ -33,6 +37,21 @@ func get_input():
 		prev_dir = "down"
 		if (prev_dir == "up"):
 			anim.play("walk_left")
+	elif Input.is_action_just_pressed("attack"):
+		state = "attack"
+
+
+func attack_state():
+	match prev_dir:
+		"left":
+			anim.play("attack_left")
+		"right":
+			anim.play("attack_right")
+		"up":
+			anim.play("attack_up")
+		"down":
+			anim.play("attack_left")
+	state = "move"
 
 
 func player():
