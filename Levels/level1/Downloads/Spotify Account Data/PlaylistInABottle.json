@@ -1,0 +1,23 @@
+{"capsule2023":{
+  "vessel": "BOTTLE",
+  "response": [{
+    "question": "questions_question7",
+    "answer": "spotify:track:5WtfUKzXircvW8l5aaVZWT"
+  }, {
+    "question": "questions_question18",
+    "answer": "spotify:track:458EaCXcB9TRBoJEDVcdcr"
+  }, {
+    "question": "questions_question11",
+    "answer": "spotify:track:3KhW0VGRXLHruQQriH6gXJ"
+  }, {
+    "question": "questions_question4",
+    "answer": "spotify:track:6kls8cSlUyHW2BUOkDJIZE"
+  }, {
+    "question": "questions_question17",
+    "answer": "spotify:track:458EaCXcB9TRBoJEDVcdcr"
+  }, {
+    "question": "questions_question16",
+    "answer": "spotify:track:7t9gDWqX10tbhtriPR1Cnd"
+  }],
+  "playlistUri": "spotify:playlist:5jnxT8sByImZ2zF7CP7hYf"
+}}
