@@ -51,7 +51,7 @@ func _on_player_hitbox_body_exited(body):
 
 func process_enemy_attack():
 	# if the enemy is in the attack range and the enemy hasn't attacked in 
-	# the last minute, then process the attack
+	# the last second, then process the attack
 	if (enemy_in_attack_range == true) and (enemy_cool_down == false):
 		Global.player_health = Global.player_health - 10
 		if (Global.player_health <= 0):
