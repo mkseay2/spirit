@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://ke51gc8bjwof"]
+[gd_scene load_steps=3 format=3 uid="uid://ke51gc8bjwof"]
 
 [ext_resource type="Texture2D" uid="uid://bdnmo2tc2flt7" path="res://Designs/ghost.jpeg" id="1_tebig"]
+[ext_resource type="Texture2D" uid="uid://8aytdomfh034" path="res://TileSets/futuristicSimonSays/COLOR_SIMON_SAYS.png" id="2_7lg1e"]
 
 [node name="ColorFlashScreen" type="Control"]
 layout_mode = 3
@@ -22,3 +23,38 @@ grow_vertical = 2
 position = Vector2(159.5, 90)
 scale = Vector2(0.438859, 0.434783)
 texture = ExtResource("1_tebig")
+
+[node name="ColorSimonSays" type="Sprite2D" parent="TextureRect"]
+position = Vector2(152, 96)
+scale = Vector2(2.8, 2.8)
+texture = ExtResource("2_7lg1e")
+
+[node name="Red Button" type="Button" parent="TextureRect"]
+layout_mode = 0
+offset_left = 104.0
+offset_top = 48.0
+offset_right = 112.0
+offset_bottom = 56.0
+scale = Vector2(5.86829, 5.33583)
+
+[node name="Green Button" type="Button" parent="TextureRect"]
+layout_mode = 0
+offset_left = 152.0
+offset_top = 96.0
+offset_right = 160.0
+offset_bottom = 104.0
+scale = Vector2(6.29563, 5.74333)
+
+[node name="Blue Button" type="Button" parent="TextureRect"]
+offset_left = 104.0
+offset_top = 96.0
+offset_right = 112.0
+offset_bottom = 104.0
+scale = Vector2(6.29563, 5.74333)
+
+[node name="Yellow Button" type="Button" parent="TextureRect"]
+offset_left = 152.0
+offset_top = 48.0
+offset_right = 160.0
+offset_bottom = 56.0
+scale = Vector2(6.29563, 5.74333)
