@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://ke51gc8bjwof"]
+[gd_scene load_steps=2 format=3 uid="uid://ke51gc8bjwof"]
+
+[ext_resource type="Texture2D" uid="uid://bdnmo2tc2flt7" path="res://Designs/ghost.jpeg" id="1_tebig"]
 
 [node name="ColorFlashScreen" type="Control"]
 layout_mode = 3
@@ -7,3 +9,16 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Ghost" type="Sprite2D" parent="TextureRect"]
+position = Vector2(159.5, 90)
+scale = Vector2(0.438859, 0.434783)
+texture = ExtResource("1_tebig")
