@@ -49,6 +49,6 @@ func _on_attack_cool_down_timer_timeout():
 	player_cool_down = false
 
 
-func _on_enemy_hitbox_area_entered(area):
+func _on_enemy_hitbox_area_entered(_area):
 	print("area entered")
 	process_player_attack()
