@@ -1,11 +1,21 @@
-[gd_scene load_steps=10 format=3 uid="uid://cqyqk1wgj38us"]
+
+[gd_scene load_steps=17 format=3 uid="uid://cqyqk1wgj38us"]
+
 
 [ext_resource type="Script" path="res://Levels/level3/level3_room1.gd" id="1_gjvhy"]
 [ext_resource type="Texture2D" uid="uid://b4t6cphiom83f" path="res://TileSets/SciFi_DungeonTileset16x16_0x72Like.png" id="1_j71dc"]
 [ext_resource type="PackedScene" uid="uid://dfi3aa0asnuis" path="res://PlayerCharacter/player.tscn" id="3_cd54a"]
+
+[ext_resource type="Texture2D" uid="uid://dkpoil44x0trk" path="res://TileSets/futuristic puzzle folder/FUTURE_BLUE_BLOCK.png" id="3_ebeyb"]
+[ext_resource type="Texture2D" uid="uid://bgnm3ww78abhe" path="res://TileSets/futuristic puzzle folder/FUTURE_GREEN_BLOCK.png" id="4_wycea"]
+[ext_resource type="Texture2D" uid="uid://cdcl1sh8dj8ct" path="res://TileSets/futuristic puzzle folder/FUTURE_RED_BLOCK.png" id="5_fti7m"]
+[ext_resource type="Texture2D" uid="uid://bybcsd11pmlb1" path="res://TileSets/futuristic puzzle folder/FUTURE_YELLOW_BLOCK.png" id="6_5pme6"]
+[ext_resource type="Texture2D" uid="uid://p0tnr0vnwkqb" path="res://TileSets/futuristic puzzle folder/KEYPAD.png" id="7_0ng7d"]
+
 [ext_resource type="Texture2D" uid="uid://c550t0oeuo40f" path="res://Designs/progress_bar_full.png" id="4_wht24"]
 [ext_resource type="Texture2D" uid="uid://rf3pxrsmmuam" path="res://Designs/progress_bar_fill_color.png" id="5_0vvmp"]
 [ext_resource type="PackedScene" uid="uid://cj5n0uxan30h6" path="res://Enemies/slug.tscn" id="6_tf8ru"]
+
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vkgrw"]
 texture = ExtResource("1_j71dc")
@@ -236,8 +246,34 @@ texture = ExtResource("1_j71dc")
 14:14/0 = 0
 15:14/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sf42h"]
+texture = ExtResource("3_ebeyb")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xcnyi"]
+texture = ExtResource("4_wycea")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xdegk"]
+texture = ExtResource("5_fti7m")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s8qwh"]
+texture = ExtResource("6_5pme6")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_klgbi"]
+texture = ExtResource("7_0ng7d")
+0:0/0 = 0
+0:1/0 = 0
+0:2/0 = 0
+1:0/0 = 0
+1:1/0 = 0
+1:2/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_wp1ah"]
 sources/0 = SubResource("TileSetAtlasSource_vkgrw")
+sources/1 = SubResource("TileSetAtlasSource_sf42h")
+sources/2 = SubResource("TileSetAtlasSource_xcnyi")
+sources/3 = SubResource("TileSetAtlasSource_xdegk")
+sources/4 = SubResource("TileSetAtlasSource_s8qwh")
+sources/5 = SubResource("TileSetAtlasSource_klgbi")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ngpkf"]
 size = Vector2(34, 114)
