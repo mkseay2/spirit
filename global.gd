@@ -5,6 +5,9 @@ var transition_scene = false
 var player_health = 100
 #var player_alive = true
 var enemy_count = 1
+var puzzle_complete = false
+
+var coin_puzzle_count = 10
 
 
 func finish_change_scene(new_scene):
@@ -17,6 +20,7 @@ func finish_change_scene(new_scene):
 		transition_scene = false
 		current_scene = new_scene
 		enemy_count = 1
+		puzzle_complete = false
 
 
 func process_enemy_death():
@@ -36,3 +40,14 @@ func process_player_death():
 	elif (current_scene == 7) or (current_scene == 8) or (current_scene == 9):
 		current_scene = 7
 		get_tree().change_scene_to_file("res://Levels/level3/level3_room1.tscn")
+
+
+func process_puzzle_complete():
+	puzzle_complete = true
+
+
+func process_coin_collection():
+	coin_puzzle_count = coin_puzzle_count - 1
+	if (coin_puzzle_count <= 0):
+		puzzle_complete = true
+	print("coin puzzle count: ", coin_puzzle_count)
