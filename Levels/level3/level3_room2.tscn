@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://deyroprctgr0g"]
+[gd_scene load_steps=7 format=3 uid="uid://deyroprctgr0g"]
 
 [ext_resource type="Texture2D" uid="uid://b4t6cphiom83f" path="res://TileSets/SciFi_DungeonTileset16x16_0x72Like.png" id="1_ck4oe"]
 [ext_resource type="Script" path="res://Levels/level3/level3_room2.gd" id="1_wskdy"]
@@ -236,9 +236,6 @@ texture = ExtResource("1_ck4oe")
 [sub_resource type="TileSet" id="TileSet_hjgit"]
 sources/0 = SubResource("TileSetAtlasSource_a1le1")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_eviav"]
-size = Vector2(34, 138)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8cs4j"]
 size = Vector2(34, 138)
 
@@ -256,13 +253,7 @@ position = Vector2(24, 152)
 [node name="Collisions" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions"]
-polygon = PackedVector2Array(0, 0, 448, 0, 448, 72, 480, 72, 480, 208, 448, 208, 448, 288, 0, 288, 0, 208, -32, 208, -32, 72, 0, 72, 0, 0, -8, 0, -40, 64, -40, 216, -8, 296, 456, 296, 488, 216, 488, 64, 456, -8, 0, -8)
-
-[node name="Room1_Transition" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Room1_Transition"]
-position = Vector2(-17, 139)
-shape = SubResource("RectangleShape2D_eviav")
+polygon = PackedVector2Array(0, 0, 448, 0, 448, 72, 480, 72, 480, 208, 448, 208, 448, 288, 0, 288, 0, 208, 0, 72, 0, 0, -8, 0, -8, 296, 456, 296, 488, 216, 488, 64, 456, -8, 0, -8)
 
 [node name="Room3_Transition" type="Area2D" parent="."]
 
@@ -270,5 +261,4 @@ shape = SubResource("RectangleShape2D_eviav")
 position = Vector2(465, 139)
 shape = SubResource("RectangleShape2D_8cs4j")
 
-[connection signal="body_entered" from="Room1_Transition" to="." method="_on_room_1_transition_body_entered"]
 [connection signal="body_entered" from="Room3_Transition" to="." method="_on_room_3_transition_body_entered"]

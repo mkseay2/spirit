@@ -1,5 +1,7 @@
 extends Node2D
 
+var enemy_count = 1
+
 
 func _ready():
 	if Global.new_game == false:
@@ -12,9 +14,8 @@ func _process(_delta):
 
 
 func _on_room_2_transition_body_entered(body):
-	if body.has_method("player"):
+	if (body.has_method("player") and (enemy_count == 0)):
 		Global.transition_scene = true
-		Global.transition_backwards = false
 
 
 func change_scene():

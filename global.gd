@@ -6,9 +6,6 @@ var transition_scene = false
 var player_health = 100
 var player_alive = true
 
-# used to determine whether the player is going to the next room 
-# or the previous room
-var transition_backwards = false
 var new_game = true
 
 

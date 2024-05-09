@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://divfeqomqs06o"]
+[gd_scene load_steps=7 format=3 uid="uid://divfeqomqs06o"]
 
 [ext_resource type="Script" path="res://Levels/level1/level1_room2.gd" id="1_14dpg"]
 [ext_resource type="Texture2D" uid="uid://fb7c1lwc1tym" path="res://TileSets/1_terrain.png" id="1_n15ai"]
@@ -140,9 +140,6 @@ texture = ExtResource("1_n15ai")
 [sub_resource type="TileSet" id="TileSet_bruhk"]
 sources/0 = SubResource("TileSetAtlasSource_v8a4w")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_qjdcn"]
-size = Vector2(39, 110)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s5bqm"]
 size = Vector2(40, 110)
 
@@ -163,7 +160,7 @@ position = Vector2(25, 145)
 [node name="Collisions" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions"]
-polygon = PackedVector2Array(0, 0, 448, 0, 448, 80, 488, 80, 488, 192, 448, 192, 448, 288, 0, 288, 0, 192, -40, 192, -40, 80, 0, 80, 0, 0, -8, 0, -48, 72, -48, 200, -8, 296, 456, 296, 496, 200, 496, 72, 456, -8, 0, -8)
+polygon = PackedVector2Array(0, 0, 448, 0, 448, 80, 488, 80, 488, 192, 448, 192, 448, 288, 0, 288, 0, 192, 0, 80, 0, 0, -8, 0, -8, 296, 456, 296, 496, 200, 496, 72, 456, -8, 0, -8)
 
 [node name="Cavern_Collision1" type="CollisionPolygon2D" parent="Collisions"]
 polygon = PackedVector2Array(168, 288, 168, 232, 168, 208, 184, 192, 232, 192, 248, 208, 248, 288, 168, 288, 168, 296, 256, 296, 256, 200, 240, 184, 176, 184, 160, 200, 160, 288)
@@ -171,18 +168,10 @@ polygon = PackedVector2Array(168, 288, 168, 232, 168, 208, 184, 192, 232, 192, 2
 [node name="Cavern_Collision2" type="CollisionPolygon2D" parent="Collisions"]
 polygon = PackedVector2Array(168, 0, 168, 72, 192, 88, 232, 88, 248, 72, 248, 0, 168, 0, 168, -8, 256, -8, 256, 80, 232, 96, 192, 96, 160, 80, 160, 0)
 
-[node name="Room1_Transition" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Room1_Transition"]
-position = Vector2(-19.5, 136)
-shape = SubResource("RectangleShape2D_qjdcn")
-
 [node name="Room3_Transition" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Room3_Transition"]
 position = Vector2(469, 136)
 shape = SubResource("RectangleShape2D_s5bqm")
 
-[connection signal="body_entered" from="Room1_Transition" to="." method="_on_room_1_transition_body_entered"]
-[connection signal="body_exited" from="Room1_Transition" to="." method="_on_room_1_transition_body_exited"]
 [connection signal="body_entered" from="Room3_Transition" to="." method="_on_room_3_transition_body_entered"]

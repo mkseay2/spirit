@@ -34,9 +34,9 @@ func move_state():
 		anim.play("walk_up")
 		prev_dir = "up"
 	elif Input.is_action_just_pressed("ui_down"):
-		prev_dir = "down"
 		if (prev_dir == "up"):
 			anim.play("walk_left")
+			prev_dir = "left"
 	elif Input.is_action_just_pressed("attack"):
 		state = "attack"
 
@@ -45,13 +45,13 @@ func attack_state():
 	match prev_dir:
 		"left":
 			anim.play("attack_left")
+			$player_hurtbox_left/CollisionShape2D.disabled = false
 		"right":
 			anim.play("attack_right")
+			$player_hurtbox_right/CollisionShape2D.disabled = false
 		"up":
 			anim.play("attack_up")
-		"down":
-			anim.play("attack_left")
-	state = "move"
+			$player_hurtbox_up/CollisionShape2D.disabled = false
 
 
 func player():
@@ -72,7 +72,7 @@ func process_enemy_attack():
 	# if the enemy is in the attack range and the enemy hasn't attacked in 
 	# the last second, then process the attack
 	if (enemy_in_attack_range == true) and (enemy_cool_down == false):
-		Global.player_health = Global.player_health - 10
+		Global.player_health = max(Global.player_health - 5, 0)
 		if (Global.player_health <= 0):
 			# TODO: player is dead, restart level
 			Global.player_alive = false
@@ -87,3 +87,14 @@ func process_enemy_attack():
 func _on_attack_cool_down_timer_timeout():
 	# cool down period is over so enemy may attack again
 	enemy_cool_down = false
+
+
+func _on_animated_sprite_2d_animation_finished():
+	state = "move"
+	match anim.animation:
+		"attack_left":
+			$player_hurtbox_left/CollisionShape2D.disabled = true
+		"attack_right":
+			$player_hurtbox_right/CollisionShape2D.disabled = true
+		"attack_up":
+			$player_hurtbox_up/CollisionShape2D.disabled = true

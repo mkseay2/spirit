@@ -37,8 +37,13 @@ shape = SubResource("CapsuleShape2D_s4nas")
 [node name="enemy_hitbox" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="enemy_hitbox"]
+light_mask = 4
+visibility_layer = 4
 position = Vector2(0, -17)
 shape = SubResource("CapsuleShape2D_2tlx3")
+
+[node name="attack_cool_down_timer" type="Timer" parent="."]
+wait_time = 0.5
 
 [connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]

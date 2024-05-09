@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bqlk4wp3oxg28"]
+[gd_scene load_steps=7 format=3 uid="uid://bqlk4wp3oxg28"]
 
 [ext_resource type="Texture2D" uid="uid://fb7c1lwc1tym" path="res://TileSets/1_terrain.png" id="1_3xbld"]
 [ext_resource type="Script" path="res://Levels/level1/level1_room3.gd" id="1_6xcak"]
@@ -140,9 +140,6 @@ texture = ExtResource("1_3xbld")
 [sub_resource type="TileSet" id="TileSet_bruhk"]
 sources/0 = SubResource("TileSetAtlasSource_v8a4w")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_e0iff"]
-size = Vector2(34, 98)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_am46n"]
 size = Vector2(34, 98)
 
@@ -161,13 +158,7 @@ position = Vector2(40, 144)
 [node name="Collisions" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions"]
-polygon = PackedVector2Array(0, 0, 448, 0, 448, 96, 480, 96, 480, 192, 448, 192, 448, 288, 0, 288, 0, 192, -32, 192, -32, 96, 0, 96, 0, 0, -8, 0, -40, 88, -40, 200, -8, 296, 456, 296, 488, 200, 488, 88, 456, -8, 0, -8)
-
-[node name="Room2_Transition" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Room2_Transition"]
-position = Vector2(-15, 143)
-shape = SubResource("RectangleShape2D_e0iff")
+polygon = PackedVector2Array(0, 0, 448, 0, 448, 96, 480, 96, 480, 192, 448, 192, 448, 288, 0, 288, 0, 192, 0, 96, 0, 0, -8, 0, -8, 296, 456, 296, 488, 200, 488, 88, 456, -8, 0, -8)
 
 [node name="Level2_Transition" type="Area2D" parent="."]
 
@@ -175,5 +166,4 @@ shape = SubResource("RectangleShape2D_e0iff")
 position = Vector2(465, 143)
 shape = SubResource("RectangleShape2D_am46n")
 
-[connection signal="body_entered" from="Room2_Transition" to="." method="_on_room_2_transition_body_entered"]
 [connection signal="body_entered" from="Level2_Transition" to="." method="_on_level_2_transition_body_entered"]

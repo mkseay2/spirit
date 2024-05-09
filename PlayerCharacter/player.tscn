@@ -1,15 +1,7 @@
-[gd_scene load_steps=28 format=3 uid="uid://dfi3aa0asnuis"]
+[gd_scene load_steps=31 format=3 uid="uid://dfi3aa0asnuis"]
 
 [ext_resource type="Script" path="res://PlayerCharacter/Player.gd" id="1_xgj18"]
 [ext_resource type="Texture2D" uid="uid://co3sho7h8j2c2" path="res://PlayerCharacter/Mel_SpriteSheet_New.png" id="2_vkw7e"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_70tj8"]
-radius = 7.0
-height = 20.0
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dru1k"]
-radius = 16.0
-height = 40.0
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_khoer"]
 load_path = "res://.godot/imported/Mel_SpriteSheet_New.png-9784fb310bf9b5fb0cf906d8d293b2c8.ctex"
@@ -194,10 +186,37 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_70tj8"]
+radius = 7.0
+height = 20.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dru1k"]
+height = 40.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gqumj"]
+radius = 9.0
+height = 32.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hguiv"]
+radius = 9.0
+height = 32.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2dy54"]
+radius = 12.0
+height = 32.0
+
 [node name="Player" type="CharacterBody2D"]
 y_sort_enabled = true
 collision_layer = 3
 script = ExtResource("1_xgj18")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, -14)
+scale = Vector2(1.54, 1.54)
+sprite_frames = SubResource("SpriteFrames_rifl2")
+animation = &"attack_left"
+frame = 5
+frame_progress = 1.0
 
 [node name="CollisionLegs" type="CollisionShape2D" parent="."]
 rotation = 1.5708
@@ -218,14 +237,37 @@ drag_vertical_enabled = true
 position = Vector2(-1, -11)
 shape = SubResource("CapsuleShape2D_dru1k")
 
+[node name="player_hurtbox_left" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player_hurtbox_left"]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(-16, -10)
+shape = SubResource("CapsuleShape2D_gqumj")
+disabled = true
+
+[node name="player_hurtbox_right" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player_hurtbox_right"]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(13, -10)
+shape = SubResource("CapsuleShape2D_hguiv")
+disabled = true
+
+[node name="player_hurtbox_up" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player_hurtbox_up"]
+light_mask = 4
+visibility_layer = 4
+position = Vector2(-2.13163e-14, -27)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_2dy54")
+disabled = true
+
 [node name="attack_cool_down_timer" type="Timer" parent="."]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-2.38419e-07, -14)
-scale = Vector2(1.54, 1.54)
-sprite_frames = SubResource("SpriteFrames_rifl2")
-animation = &"walk_right"
-
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
 [connection signal="body_entered" from="player_hitbox" to="." method="_on_player_hitbox_body_entered"]
 [connection signal="body_exited" from="player_hitbox" to="." method="_on_player_hitbox_body_exited"]
 [connection signal="timeout" from="attack_cool_down_timer" to="." method="_on_attack_cool_down_timer_timeout"]
