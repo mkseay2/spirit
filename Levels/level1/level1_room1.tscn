@@ -1,9 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://ccqge3ngqc4y1"]
+[gd_scene load_steps=12 format=3 uid="uid://ccqge3ngqc4y1"]
 
 [ext_resource type="Script" path="res://Levels/level1/level1_room1.gd" id="1_l2yo7"]
 [ext_resource type="Texture2D" uid="uid://fb7c1lwc1tym" path="res://TileSets/1_terrain.png" id="1_ne2in"]
 [ext_resource type="Texture2D" uid="uid://b5ht72duwbgoo" path="res://TileSets/3_plants.png" id="2_lmtqv"]
 [ext_resource type="PackedScene" uid="uid://dfi3aa0asnuis" path="res://PlayerCharacter/player.tscn" id="3_0t4ga"]
+[ext_resource type="PackedScene" uid="uid://c10hoyrk2h03y" path="res://Enemies/caveman.tscn" id="5_ysv0x"]
+[ext_resource type="Texture2D" uid="uid://c550t0oeuo40f" path="res://Designs/progress_bar_full.png" id="6_qykq8"]
+[ext_resource type="Texture2D" uid="uid://rf3pxrsmmuam" path="res://Designs/progress_bar_fill_color.png" id="7_my4wn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fpudc"]
 texture = ExtResource("1_ne2in")
@@ -1066,7 +1069,7 @@ layer_2/y_sort_enabled = true
 layer_2/tile_data = PackedInt32Array(851973, 1310721, 0, 196629, 1310721, 0, 131073, 1179649, 0, 589835, 1179649, 0, 131086, 1179649, 2, 25, 1179649, 2, 983054, 1179649, 2, 1114136, 1179649, 2)
 
 [node name="Player" parent="." instance=ExtResource("3_0t4ga")]
-position = Vector2(192, 96)
+position = Vector2(216, 104)
 
 [node name="Collisions" type="StaticBody2D" parent="."]
 
@@ -1079,5 +1082,19 @@ polygon = PackedVector2Array(-32, 0, 416, 0, 416, 104, 448, 104, 448, 208, 416, 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Room2_Transition"]
 position = Vector2(464, 155)
 shape = SubResource("RectangleShape2D_s5bym")
+
+[node name="Caveman" parent="." instance=ExtResource("5_ysv0x")]
+position = Vector2(104, 96)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasLayer"]
+offset_left = 188.0
+offset_top = 6.0
+offset_right = 982.0
+offset_bottom = 130.0
+scale = Vector2(0.15, 0.15)
+texture_under = ExtResource("6_qykq8")
+texture_progress = ExtResource("7_my4wn")
 
 [connection signal="body_entered" from="Room2_Transition" to="." method="_on_room_2_transition_body_entered"]

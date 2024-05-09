@@ -1,0 +1,54 @@
+[gd_scene load_steps=6 format=3 uid="uid://c10hoyrk2h03y"]
+
+[ext_resource type="Script" path="res://Enemies/caveman.gd" id="1_fm2iy"]
+[ext_resource type="Texture2D" uid="uid://teb0xat7t3mq" path="res://Designs/Enemies/Caveman.png" id="2_6hosi"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_n231p"]
+radius = 75.0067
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s4nas"]
+radius = 5.0
+height = 22.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2tlx3"]
+radius = 25.0
+height = 50.0
+
+[node name="Caveman" type="CharacterBody2D"]
+y_sort_enabled = true
+collision_mask = 5
+script = ExtResource("1_fm2iy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2.08165e-12, -16)
+scale = Vector2(2.40625, 2.60677)
+texture = ExtResource("2_6hosi")
+
+[node name="DetectionArea" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea"]
+shape = SubResource("CircleShape2D_n231p")
+
+[node name="CollisionLegs" type="CollisionShape2D" parent="."]
+y_sort_enabled = true
+position = Vector2(0, -2)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_s4nas")
+
+[node name="enemy_hitbox" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="enemy_hitbox"]
+position = Vector2(0, -18)
+shape = SubResource("CapsuleShape2D_2tlx3")
+
+[node name="attack_cool_down_timer" type="Timer" parent="."]
+wait_time = 0.2
+
+[connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]
+[connection signal="area_entered" from="enemy_hitbox" to="." method="_on_enemy_hitbox_area_entered"]
+[connection signal="timeout" from="attack_cool_down_timer" to="." method="_on_attack_cool_down_timer_timeout"]
