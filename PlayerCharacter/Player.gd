@@ -45,8 +45,7 @@ func attack_state():
 	match prev_dir:
 		"left":
 			anim.play("attack_left")
-			#$player_hurtbox_left/CollisionShape2D.disabled = false
-			$player_hurtbox_left/CollisionShape2D.set_deferred("disabled", false)
+			$player_hurtbox_left/CollisionShape2D.disabled = false
 		"right":
 			anim.play("attack_right")
 			$player_hurtbox_right/CollisionShape2D.disabled = false
@@ -74,9 +73,9 @@ func process_enemy_attack():
 	# the last second, then process the attack
 	if (enemy_in_attack_range == true) and (enemy_cool_down == false):
 		Global.player_health = max(Global.player_health - 5, 0)
+		
 		if (Global.player_health <= 0):
-			# TODO: player is dead, restart level
-			Global.player_alive = false
+			Global.process_player_death()
 		else:
 			# begin cool down period so enemy cannot spam attacks
 			enemy_cool_down = true
