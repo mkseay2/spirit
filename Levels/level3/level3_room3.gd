@@ -1,7 +1,5 @@
 extends Node2D
 
-var enemy_count = 1
-
 
 func _ready():
 	$Player.global_transform.origin.x = 25
@@ -10,6 +8,7 @@ func _ready():
 
 func _process(_delta):
 	change_scene()
+	$CanvasLayer/TextureProgressBar.value = Global.player_health
 
 
 func change_scene():

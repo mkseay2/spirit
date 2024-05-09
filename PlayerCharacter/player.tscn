@@ -238,28 +238,30 @@ position = Vector2(-1, -11)
 shape = SubResource("CapsuleShape2D_dru1k")
 
 [node name="player_hurtbox_left" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="player_hurtbox_left"]
 light_mask = 4
 visibility_layer = 4
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player_hurtbox_left"]
 position = Vector2(-16, -10)
 shape = SubResource("CapsuleShape2D_gqumj")
 disabled = true
 
 [node name="player_hurtbox_right" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player_hurtbox_right"]
-light_mask = 4
-visibility_layer = 4
 position = Vector2(13, -10)
 shape = SubResource("CapsuleShape2D_hguiv")
 disabled = true
 
 [node name="player_hurtbox_up" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player_hurtbox_up"]
-light_mask = 4
-visibility_layer = 4
 position = Vector2(-2.13163e-14, -27)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_2dy54")

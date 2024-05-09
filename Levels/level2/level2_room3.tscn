@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://cx7jy480da5ny"]
+[gd_scene load_steps=9 format=3 uid="uid://cx7jy480da5ny"]
 
 [ext_resource type="Script" path="res://Levels/level2/level2_room3.gd" id="1_ldgnf"]
 [ext_resource type="Texture2D" uid="uid://bg753sgvmfw0r" path="res://TileSets/6_floors.png" id="1_lhiqd"]
 [ext_resource type="PackedScene" uid="uid://dfi3aa0asnuis" path="res://PlayerCharacter/player.tscn" id="3_dkahi"]
+[ext_resource type="Texture2D" uid="uid://c550t0oeuo40f" path="res://Designs/progress_bar_full.png" id="4_hfrni"]
+[ext_resource type="Texture2D" uid="uid://rf3pxrsmmuam" path="res://Designs/progress_bar_fill_color.png" id="5_b2wok"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8lp05"]
 texture = ExtResource("1_lhiqd")
@@ -49,5 +51,16 @@ polygon = PackedVector2Array(0, 0, 448, 0, 448, 80, 496, 80, 496, 200, 448, 200,
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Level3_Transition"]
 position = Vector2(473, 139)
 shape = SubResource("RectangleShape2D_m4qwu")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasLayer"]
+offset_left = 188.0
+offset_top = 6.0
+offset_right = 982.0
+offset_bottom = 130.0
+scale = Vector2(0.15, 0.15)
+texture_under = ExtResource("4_hfrni")
+texture_progress = ExtResource("5_b2wok")
 
 [connection signal="body_entered" from="Level3_Transition" to="." method="_on_level_3_transition_body_entered"]

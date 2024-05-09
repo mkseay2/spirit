@@ -45,7 +45,8 @@ func attack_state():
 	match prev_dir:
 		"left":
 			anim.play("attack_left")
-			$player_hurtbox_left/CollisionShape2D.disabled = false
+			#$player_hurtbox_left/CollisionShape2D.disabled = false
+			$player_hurtbox_left/CollisionShape2D.set_deferred("disabled", false)
 		"right":
 			anim.play("attack_right")
 			$player_hurtbox_right/CollisionShape2D.disabled = false
@@ -93,7 +94,8 @@ func _on_animated_sprite_2d_animation_finished():
 	state = "move"
 	match anim.animation:
 		"attack_left":
-			$player_hurtbox_left/CollisionShape2D.disabled = true
+			#$player_hurtbox_left/CollisionShape2D.disabled = true
+			$player_hurtbox_left/CollisionShape2D.set_deferred("disabled", true)
 		"attack_right":
 			$player_hurtbox_right/CollisionShape2D.disabled = true
 		"attack_up":
