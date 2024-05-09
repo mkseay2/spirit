@@ -1,8 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://4dd62vcujryf"]
+[gd_scene load_steps=9 format=3 uid="uid://4dd62vcujryf"]
 
 [ext_resource type="Script" path="res://Levels/level3/level3_room3.gd" id="1_vjl2g"]
 [ext_resource type="Texture2D" uid="uid://b4t6cphiom83f" path="res://TileSets/SciFi_DungeonTileset16x16_0x72Like.png" id="1_wi70m"]
 [ext_resource type="PackedScene" uid="uid://dfi3aa0asnuis" path="res://PlayerCharacter/player.tscn" id="3_i52c6"]
+[ext_resource type="Texture2D" uid="uid://c550t0oeuo40f" path="res://Designs/progress_bar_full.png" id="4_ng3jm"]
+[ext_resource type="Texture2D" uid="uid://rf3pxrsmmuam" path="res://Designs/progress_bar_fill_color.png" id="5_psc7h"]
+[ext_resource type="PackedScene" uid="uid://cj5n0uxan30h6" path="res://Enemies/slug.tscn" id="6_xyc3a"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_knh0r"]
 texture = ExtResource("1_wi70m")
@@ -236,10 +239,8 @@ texture = ExtResource("1_wi70m")
 [sub_resource type="TileSet" id="TileSet_oy4p7"]
 sources/0 = SubResource("TileSetAtlasSource_knh0r")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_x1i0c"]
-size = Vector2(34, 146)
-
 [node name="Level3Room3" type="Node2D"]
+y_sort_enabled = true
 script = ExtResource("1_vjl2g")
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -253,12 +254,18 @@ position = Vector2(32, 144)
 [node name="Collisions" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions"]
-polygon = PackedVector2Array(0, 0, 448, 0, 448, 288, 0, 288, 0, 216, -32, 216, -32, 72, 0, 72, 0, 0, -8, 0, -40, 64, -40, 224, -8, 296, 456, 296, 456, -8, 0, -8)
+polygon = PackedVector2Array(0, 0, 448, 0, 448, 288, 0, 288, 0, 216, 0, 72, 0, 0, -8, 0, -8, 296, 456, 296, 456, -8, 0, -8)
 
-[node name="Room2_Transition" type="Area2D" parent="."]
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Room2_Transition"]
-position = Vector2(-17, 143)
-shape = SubResource("RectangleShape2D_x1i0c")
+[node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasLayer"]
+offset_left = 188.0
+offset_top = 6.0
+offset_right = 982.0
+offset_bottom = 130.0
+scale = Vector2(0.15, 0.15)
+texture_under = ExtResource("4_ng3jm")
+texture_progress = ExtResource("5_psc7h")
 
-[connection signal="body_entered" from="Room2_Transition" to="." method="_on_room_2_transition_body_entered"]
+[node name="Caveman" parent="." instance=ExtResource("6_xyc3a")]
+position = Vector2(304, 104)
