@@ -187,7 +187,7 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_70tj8"]
-radius = 7.0
+radius = 9.0
 height = 20.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dru1k"]
@@ -211,13 +211,15 @@ collision_layer = 3
 script = ExtResource("1_xgj18")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-1, -14)
+position = Vector2(1, -18)
 scale = Vector2(1.54, 1.54)
 sprite_frames = SubResource("SpriteFrames_rifl2")
-animation = &"walk_right"
+animation = &"attack_left"
 speed_scale = 1.4
 
 [node name="CollisionLegs" type="CollisionShape2D" parent="."]
+y_sort_enabled = true
+position = Vector2(3, -4)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_70tj8")
 
@@ -233,7 +235,7 @@ drag_vertical_enabled = true
 [node name="player_hitbox" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="player_hitbox"]
-position = Vector2(-1, -11)
+position = Vector2(0, -15)
 shape = SubResource("CapsuleShape2D_dru1k")
 
 [node name="player_hurtbox_left" type="Area2D" parent="."]

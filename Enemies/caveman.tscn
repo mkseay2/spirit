@@ -15,6 +15,7 @@ radius = 25.0
 height = 50.0
 
 [node name="Caveman" type="CharacterBody2D"]
+y_sort_enabled = true
 collision_mask = 5
 script = ExtResource("1_fm2iy")
 
@@ -31,6 +32,7 @@ collision_mask = 2
 shape = SubResource("CircleShape2D_n231p")
 
 [node name="CollisionLegs" type="CollisionShape2D" parent="."]
+y_sort_enabled = true
 position = Vector2(0, -2)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_s4nas")
