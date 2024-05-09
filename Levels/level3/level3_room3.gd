@@ -12,5 +12,5 @@ func _process(_delta):
 
 
 func change_scene():
-	# TODO: check for level completion
-	pass
+	if (Global.enemy_count <= 0):
+		get_tree().change_scene_to_file("res://UI/game_over.tscn")

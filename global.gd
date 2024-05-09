@@ -4,7 +4,7 @@ var current_scene = 1
 var transition_scene = false
 var player_health = 100
 var player_alive = true
-var enemy_count = 0
+var enemy_count = 1
 
 
 func finish_change_scene(new_scene):
