@@ -4,9 +4,7 @@ var enemy_count = 1
 
 
 func _ready():
-	if Global.new_game == false:
-		$Player.global_transform.origin.x = 416
-		$Player.global_transform.origin.y = 155
+	pass
 
 
 func _process(_delta):
@@ -23,4 +21,3 @@ func change_scene():
 		if Global.current_scene == 1:
 			get_tree().change_scene_to_file("res://Levels/level1/level1_room2.tscn")
 			Global.finish_change_scene(2)
-			Global.new_game = false
