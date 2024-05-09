@@ -243,6 +243,7 @@ sources/0 = SubResource("TileSetAtlasSource_a1le1")
 size = Vector2(34, 138)
 
 [node name="Level3Room2" type="Node2D"]
+y_sort_enabled = true
 script = ExtResource("1_wskdy")
 
 [node name="TileMap" type="TileMap" parent="."]

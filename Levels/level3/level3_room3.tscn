@@ -240,6 +240,7 @@ texture = ExtResource("1_wi70m")
 sources/0 = SubResource("TileSetAtlasSource_knh0r")
 
 [node name="Level3Room3" type="Node2D"]
+y_sort_enabled = true
 script = ExtResource("1_vjl2g")
 
 [node name="TileMap" type="TileMap" parent="."]

@@ -12,6 +12,8 @@ func _process(_delta):
 
 
 func _on_room_2_transition_body_entered(body):
+	print("enemy count: ", Global.enemy_count)
+	print("current_scene = ", Global.current_scene)
 	if body.has_method("player") and (Global.enemy_count <= 0):
 		Global.transition_scene = true
 
