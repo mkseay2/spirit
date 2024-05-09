@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://cx7jy480da5ny"]
+[gd_scene load_steps=10 format=3 uid="uid://cx7jy480da5ny"]
 
 [ext_resource type="Script" path="res://Levels/level2/level2_room3.gd" id="1_ldgnf"]
 [ext_resource type="Texture2D" uid="uid://bg753sgvmfw0r" path="res://TileSets/6_floors.png" id="1_lhiqd"]
 [ext_resource type="PackedScene" uid="uid://dfi3aa0asnuis" path="res://PlayerCharacter/player.tscn" id="3_dkahi"]
 [ext_resource type="Texture2D" uid="uid://c550t0oeuo40f" path="res://Designs/progress_bar_full.png" id="4_hfrni"]
 [ext_resource type="Texture2D" uid="uid://rf3pxrsmmuam" path="res://Designs/progress_bar_fill_color.png" id="5_b2wok"]
+[ext_resource type="PackedScene" uid="uid://duxorykmxxrqa" path="res://Enemies/gunner.tscn" id="6_7m7em"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8lp05"]
 texture = ExtResource("1_lhiqd")
@@ -62,5 +63,8 @@ offset_bottom = 130.0
 scale = Vector2(0.15, 0.15)
 texture_under = ExtResource("4_hfrni")
 texture_progress = ExtResource("5_b2wok")
+
+[node name="Caveman" parent="." instance=ExtResource("6_7m7em")]
+position = Vector2(384, 96)
 
 [connection signal="body_entered" from="Level3_Transition" to="." method="_on_level_3_transition_body_entered"]

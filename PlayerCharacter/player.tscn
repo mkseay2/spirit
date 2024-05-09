@@ -214,9 +214,8 @@ script = ExtResource("1_xgj18")
 position = Vector2(-1, -14)
 scale = Vector2(1.54, 1.54)
 sprite_frames = SubResource("SpriteFrames_rifl2")
-animation = &"attack_left"
-frame = 5
-frame_progress = 1.0
+animation = &"walk_right"
+speed_scale = 1.4
 
 [node name="CollisionLegs" type="CollisionShape2D" parent="."]
 rotation = 1.5708
