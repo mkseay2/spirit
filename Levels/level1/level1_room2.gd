@@ -18,7 +18,7 @@ func _on_room_3_transition_body_entered(body):
 
 
 func change_scene():
-	if Global.transition_scene == true:
-		if Global.current_scene == "level1_room2":
+	if Global.transition_scene == true and (enemy_count <= 0):
+		if Global.current_scene == 2:
 			get_tree().change_scene_to_file("res://Levels/level1/level1_room3.tscn")
-			Global.finish_change_scene("level1_room3")
+			Global.finish_change_scene(3)

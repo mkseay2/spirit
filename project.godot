@@ -17,6 +17,15 @@ config/features=PackedStringArray("4.2", "Forward Plus")
 [autoload]
 
 Global="*res://global.gd"
+Level1Room1="*res://Levels/level1/level1_room1.gd"
+Level1Room2="*res://Levels/level1/level1_room2.gd"
+Level1Room3="*res://Levels/level1/level1_room3.gd"
+Level2Room1="*res://Levels/level2/level2_room1.gd"
+Level2Room2="*res://Levels/level2/level2_room2.gd"
+Level2Room3="*res://Levels/level2/level2_room3.gd"
+Level3Room1="*res://Levels/level3/level3_room1.gd"
+Level3Room2="*res://Levels/level3/level3_room2.gd"
+Level3Room3="*res://Levels/level3/level3_room3.gd"
 
 [display]
 

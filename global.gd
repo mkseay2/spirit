@@ -1,7 +1,7 @@
 extends Node
 
 
-var current_scene = "level1_room1"
+var current_scene = 1
 var transition_scene = false
 var player_health = 100
 var player_alive = true

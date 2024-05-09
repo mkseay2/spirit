@@ -43,9 +43,10 @@ position = Vector2(0, -17)
 shape = SubResource("CapsuleShape2D_2tlx3")
 
 [node name="attack_cool_down_timer" type="Timer" parent="."]
-wait_time = 0.5
+wait_time = 0.2
 
 [connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
 [connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]
 [connection signal="body_entered" from="enemy_hitbox" to="." method="_on_enemy_hitbox_body_entered"]
 [connection signal="body_exited" from="enemy_hitbox" to="." method="_on_enemy_hitbox_body_exited"]
+[connection signal="timeout" from="attack_cool_down_timer" to="." method="_on_attack_cool_down_timer_timeout"]
