@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://cqyqk1wgj38us"]
+[gd_scene load_steps=21 format=3 uid="uid://cqyqk1wgj38us"]
 
 [ext_resource type="Script" path="res://Levels/level3/level3_room1.gd" id="1_gjvhy"]
 [ext_resource type="Texture2D" uid="uid://b4t6cphiom83f" path="res://TileSets/SciFi_DungeonTileset16x16_0x72Like.png" id="1_j71dc"]
@@ -282,6 +282,9 @@ sources/5 = SubResource("TileSetAtlasSource_klgbi")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ngpkf"]
 size = Vector2(34, 114)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2xmsh"]
+size = Vector2(44, 53)
+
 [node name="Level3Room1" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_gjvhy")
@@ -321,5 +324,11 @@ texture_progress = ExtResource("5_0vvmp")
 
 [node name="Caveman" parent="." instance=ExtResource("6_tf8ru")]
 position = Vector2(192, 72)
+
+[node name="KeyPad" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KeyPad"]
+position = Vector2(296, 248.5)
+shape = SubResource("RectangleShape2D_2xmsh")
 
 [connection signal="body_entered" from="Room2_Transition" to="." method="_on_room_2_transition_body_entered"]
