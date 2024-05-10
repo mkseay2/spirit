@@ -149,4 +149,4 @@ grow_vertical = 2
 position = Vector2(109, 70)
 scale = Vector2(4.87783, 4.67695)
 sprite_frames = SubResource("SpriteFrames_meyam")
-frame_progress = 0.0160792
+frame_progress = 0.455717

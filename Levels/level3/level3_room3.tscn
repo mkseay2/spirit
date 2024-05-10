@@ -420,7 +420,7 @@ texture_progress = ExtResource("5_psc7h")
 [node name="Caveman" parent="." instance=ExtResource("6_xyc3a")]
 position = Vector2(304, 104)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedBlock" type="AnimatedSprite2D" parent="."]
 position = Vector2(290, 236)
 scale = Vector2(4.87783, 4.67695)
 sprite_frames = SubResource("SpriteFrames_kplsb")

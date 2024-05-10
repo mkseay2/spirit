@@ -38,6 +38,7 @@ func _on_yellow_button_pressed():
 
 
 func _on_check_button_pressed():
+	Global.is_returning = true
 	if player_input == correct_sequence:
 		sequenceCorrect.text = "Correct"
 		await get_tree().create_timer(2).timeout

@@ -1,10 +1,17 @@
 extends Node2D
 
 
+
+
 func _ready():
-	$Player.global_transform.origin.x = 25
-	$Player.global_transform.origin.y = 155
-	$AnimatedSprite2D.play("default")
+	if (Global.is_returning == true):
+		$Player.global_transform.origin.x = 130
+		$Player.global_transform.origin.y = 230
+		$AnimatedBlock.play("default")
+	else:
+		$Player.global_transform.origin.x = 25
+		$Player.global_transform.origin.y = 155
+		$AnimatedBlock.play("default")
 
 
 func _process(_delta):
