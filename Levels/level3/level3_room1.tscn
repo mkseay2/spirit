@@ -1,16 +1,17 @@
-[gd_scene load_steps=21 format=3 uid="uid://cqyqk1wgj38us"]
+[gd_scene load_steps=22 format=3 uid="uid://cqyqk1wgj38us"]
 
 [ext_resource type="Script" path="res://Levels/level3/level3_room1.gd" id="1_gjvhy"]
 [ext_resource type="Texture2D" uid="uid://b4t6cphiom83f" path="res://TileSets/SciFi_DungeonTileset16x16_0x72Like.png" id="1_j71dc"]
 [ext_resource type="PackedScene" uid="uid://dfi3aa0asnuis" path="res://PlayerCharacter/player.tscn" id="3_cd54a"]
 [ext_resource type="Texture2D" uid="uid://dkpoil44x0trk" path="res://TileSets/futuristic puzzle folder/FUTURE_BLUE_BLOCK.png" id="3_ebeyb"]
-[ext_resource type="Texture2D" path="res://Designs/progress_bar_full.png" id="4_wht24"]
+[ext_resource type="Texture2D" uid="uid://c550t0oeuo40f" path="res://Designs/progress_bar_full.png" id="4_wht24"]
 [ext_resource type="Texture2D" uid="uid://bgnm3ww78abhe" path="res://TileSets/futuristic puzzle folder/FUTURE_GREEN_BLOCK.png" id="4_wycea"]
-[ext_resource type="Texture2D" path="res://Designs/progress_bar_fill_color.png" id="5_0vvmp"]
+[ext_resource type="Texture2D" uid="uid://rf3pxrsmmuam" path="res://Designs/progress_bar_fill_color.png" id="5_0vvmp"]
 [ext_resource type="Texture2D" uid="uid://cdcl1sh8dj8ct" path="res://TileSets/futuristic puzzle folder/FUTURE_RED_BLOCK.png" id="5_fti7m"]
 [ext_resource type="Texture2D" uid="uid://bybcsd11pmlb1" path="res://TileSets/futuristic puzzle folder/FUTURE_YELLOW_BLOCK.png" id="6_5pme6"]
 [ext_resource type="PackedScene" uid="uid://cj5n0uxan30h6" path="res://Enemies/slug.tscn" id="6_tf8ru"]
 [ext_resource type="Texture2D" uid="uid://p0tnr0vnwkqb" path="res://TileSets/futuristic puzzle folder/KEYPAD.png" id="7_0ng7d"]
+[ext_resource type="Script" path="res://Levels/level3/KeyPad.gd" id="12_6jp73"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vkgrw"]
 texture = ExtResource("1_j71dc")
@@ -326,9 +327,13 @@ texture_progress = ExtResource("5_0vvmp")
 position = Vector2(192, 72)
 
 [node name="KeyPad" type="Area2D" parent="."]
+script = ExtResource("12_6jp73")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KeyPad"]
 position = Vector2(296, 248.5)
 shape = SubResource("RectangleShape2D_2xmsh")
 
 [connection signal="body_entered" from="Room2_Transition" to="." method="_on_room_2_transition_body_entered"]
+[connection signal="area_shape_entered" from="KeyPad" to="KeyPad" method="_on_area_shape_entered"]
+[connection signal="body_entered" from="KeyPad" to="KeyPad" method="_on_body_entered"]
+[connection signal="body_exited" from="KeyPad" to="KeyPad" method="_on_body_exited"]
