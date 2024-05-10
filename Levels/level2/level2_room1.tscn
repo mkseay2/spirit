@@ -1,25 +1,46 @@
-[gd_scene load_steps=10 format=3 uid="uid://dcme805ocri6p"]
+[gd_scene load_steps=13 format=3 uid="uid://dcme805ocri6p"]
 
 [ext_resource type="Script" path="res://Levels/level2/level2_room1.gd" id="1_4lnrg"]
 [ext_resource type="Texture2D" uid="uid://bg753sgvmfw0r" path="res://TileSets/6_floors.png" id="1_xrcms"]
 [ext_resource type="PackedScene" uid="uid://dfi3aa0asnuis" path="res://PlayerCharacter/player.tscn" id="3_84rwk"]
+[ext_resource type="Texture2D" uid="uid://d2wpx5avdtje4" path="res://TileSets/2_indoors.png" id="3_e8ca0"]
 [ext_resource type="Texture2D" uid="uid://c550t0oeuo40f" path="res://Designs/progress_bar_full.png" id="4_6wlh3"]
 [ext_resource type="Texture2D" uid="uid://rf3pxrsmmuam" path="res://Designs/progress_bar_fill_color.png" id="5_buf6c"]
 [ext_resource type="PackedScene" uid="uid://duxorykmxxrqa" path="res://Enemies/gunner.tscn" id="6_2c4pi"]
+[ext_resource type="PackedScene" uid="uid://de0f74n4hxhso" path="res://UI/Blue_X.tscn" id="8_ahpqy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d3j57"]
 texture = ExtResource("1_xrcms")
 7:12/size_in_atlas = Vector2i(4, 1)
 7:12/0 = 0
+7:12/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:12/0/physics_layer_0/angular_velocity = 0.0
 7:9/size_in_atlas = Vector2i(4, 1)
 7:9/0 = 0
+7:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:9/0/physics_layer_0/angular_velocity = 0.0
 7:10/size_in_atlas = Vector2i(4, 2)
 7:10/0 = 0
+7:10/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:10/0/physics_layer_0/angular_velocity = 0.0
 1:9/size_in_atlas = Vector2i(4, 4)
 1:9/0 = 0
+1:9/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+1:9/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5uxq7"]
+texture = ExtResource("3_e8ca0")
+14:0/size_in_atlas = Vector2i(2, 2)
+14:0/0 = 0
+14:0/0/y_sort_origin = 6
+14:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+14:0/0/physics_layer_0/angular_velocity = 0.0
+14:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-10.75, 6.5, 0.5, 4, 12.125, 6.625, 10.875, 11.75, 0.75, 13, -8.125, 11.125)
 
 [sub_resource type="TileSet" id="TileSet_pv2mt"]
+physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_d3j57")
+sources/1 = SubResource("TileSetAtlasSource_5uxq7")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uyws1"]
 size = Vector2(34, 106)
@@ -29,9 +50,14 @@ y_sort_enabled = true
 script = ExtResource("1_4lnrg")
 
 [node name="TileMap" type="TileMap" parent="."]
+y_sort_enabled = true
 tile_set = SubResource("TileSet_pv2mt")
 format = 2
+layer_0/name = "Floor"
 layer_0/tile_data = PackedInt32Array(65550, 458752, 10, 14, 458752, 10, 196622, 458752, 10, 327694, 458752, 10, 458766, 458752, 10, 720910, 458752, 10, 851982, 458752, 10, 983054, 458752, 10, 1048590, 458752, 10, 589838, 458752, 10, 65537, 65536, 9, 65541, 65536, 9, 65545, 65536, 9, 65546, 65536, 9, 327690, 65536, 9, 327686, 65536, 9, 327682, 65536, 9, 327681, 65536, 9, 589825, 65536, 9, 589829, 65536, 9, 589833, 65536, 9, 589834, 65536, 9, 851969, 65536, 9, 851973, 65536, 9, 851977, 65536, 9, 851978, 65536, 9, 983050, 65536, 9, 983046, 65536, 9, 983042, 65536, 9, 983041, 65536, 9, 1179649, 65536, 9, 1179653, 65536, 9, 1179657, 65536, 9, 1179658, 65536, 9, 1179662, 458752, 10, 1245198, 458752, 10, 65554, 65536, 9, 65558, 65536, 9, 327698, 65536, 9, 327702, 65536, 9, 589842, 65536, 9, 589846, 65536, 9, 851986, 65536, 9, 851990, 65536, 9, 1114130, 65536, 9, 1179666, 65536, 9, 1114134, 65536, 9, 1179670, 65536, 9, 1179674, 65536, 9, 917530, 65536, 9, 655386, 65536, 9, 393242, 65536, 9, 65562, 65536, 9, 131098, 65536, 9, 65566, 65536, 9, 327710, 65536, 9, 589854, 65536, 9, 851998, 65536, 9, 1114142, 65536, 9, 1179678, 65536, 9)
+layer_1/name = "Puzzle"
+layer_1/y_sort_enabled = true
+layer_1/tile_data = PackedInt32Array(458764, 917505, 0, 458766, 917505, 0, 458768, 917505, 0, 458770, 917505, 0, 458774, 917505, 0, 458776, 917505, 0, 589849, 917505, 0, 720921, 917505, 0, 851993, 917505, 0, 917527, 917505, 0, 1048595, 917505, 0, 1048593, 917505, 0, 1048591, 917505, 0, 1048589, 917505, 0, 1048587, 917505, 0, 851982, 917505, 0, 851985, 917505, 0, 655374, 917505, 0, 655376, 917505, 0, 655378, 917505, 0, 655382, 917505, 0, 589834, 917505, 0, 720906, 917505, 0)
 metadata/_edit_group_ = true
 
 [node name="Player" parent="." instance=ExtResource("3_84rwk")]
@@ -61,5 +87,113 @@ texture_progress = ExtResource("5_buf6c")
 
 [node name="Caveman" parent="." instance=ExtResource("6_2c4pi")]
 position = Vector2(176, 80)
+
+[node name="BlueX" parent="." instance=ExtResource("8_ahpqy")]
+offset_left = 233.0
+offset_top = 143.0
+offset_right = 233.0
+offset_bottom = 143.0
+
+[node name="BlueX2" parent="." instance=ExtResource("8_ahpqy")]
+offset_left = 331.0
+offset_top = 145.0
+offset_right = 331.0
+offset_bottom = 145.0
+
+[node name="BlueX3" parent="." instance=ExtResource("8_ahpqy")]
+offset_left = 331.0
+offset_top = 170.0
+offset_right = 331.0
+offset_bottom = 170.0
+
+[node name="BlueX4" parent="." instance=ExtResource("8_ahpqy")]
+offset_left = 330.0
+offset_top = 200.0
+offset_right = 330.0
+offset_bottom = 200.0
+
+[node name="BlueX5" parent="." instance=ExtResource("8_ahpqy")]
+offset_left = 360.0
+offset_top = 200.0
+offset_right = 360.0
+offset_bottom = 200.0
+
+[node name="BlueX6" parent="." instance=ExtResource("8_ahpqy")]
+offset_left = 384.0
+offset_top = 200.0
+offset_right = 384.0
+offset_bottom = 200.0
+
+[node name="BlueX7" parent="." instance=ExtResource("8_ahpqy")]
+offset_left = 384.0
+offset_top = 174.0
+offset_right = 384.0
+offset_bottom = 174.0
+
+[node name="BlueX8" parent="." instance=ExtResource("8_ahpqy")]
+offset_left = 383.0
+offset_top = 146.0
+offset_right = 383.0
+offset_bottom = 146.0
+
+[node name="BlueX9" parent="." instance=ExtResource("8_ahpqy")]
+offset_left = 437.0
+offset_top = 171.0
+offset_right = 437.0
+offset_bottom = 171.0
+
+[node name="BlueX10" parent="." instance=ExtResource("8_ahpqy")]
+offset_left = 205.0
+offset_top = 239.0
+offset_right = 205.0
+offset_bottom = 239.0
+
+[node name="BlueX11" parent="." instance=ExtResource("8_ahpqy")]
+offset_left = 205.0
+offset_top = 214.0
+offset_right = 205.0
+offset_bottom = 214.0
+
+[node name="BlueX12" parent="." instance=ExtResource("8_ahpqy")]
+offset_left = 234.0
+offset_top = 241.0
+offset_right = 234.0
+offset_bottom = 241.0
+
+[node name="BlueX13" parent="." instance=ExtResource("8_ahpqy")]
+offset_left = 265.0
+offset_top = 240.0
+offset_right = 265.0
+offset_bottom = 240.0
+
+[node name="BlueX14" parent="." instance=ExtResource("8_ahpqy")]
+offset_left = 291.0
+offset_top = 241.0
+offset_right = 291.0
+offset_bottom = 241.0
+
+[node name="BlueX15" parent="." instance=ExtResource("8_ahpqy")]
+offset_left = 311.0
+offset_top = 241.0
+offset_right = 311.0
+offset_bottom = 241.0
+
+[node name="BlueX16" parent="." instance=ExtResource("8_ahpqy")]
+offset_left = 307.0
+offset_top = 214.0
+offset_right = 307.0
+offset_bottom = 214.0
+
+[node name="BlueX17" parent="." instance=ExtResource("8_ahpqy")]
+offset_left = 233.0
+offset_top = 190.0
+offset_right = 233.0
+offset_bottom = 190.0
+
+[node name="BlueX18" parent="." instance=ExtResource("8_ahpqy")]
+offset_left = 105.0
+offset_top = 216.0
+offset_right = 105.0
+offset_bottom = 216.0
 
 [connection signal="body_entered" from="Room2_Transition" to="." method="_on_room_2_transition_body_entered"]
