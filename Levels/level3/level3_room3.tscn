@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://4dd62vcujryf"]
+[gd_scene load_steps=18 format=3 uid="uid://4dd62vcujryf"]
 
 [ext_resource type="Script" path="res://Levels/level3/level3_room3.gd" id="1_vjl2g"]
 [ext_resource type="Texture2D" uid="uid://b4t6cphiom83f" path="res://TileSets/SciFi_DungeonTileset16x16_0x72Like.png" id="1_wi70m"]
@@ -6,6 +6,14 @@
 [ext_resource type="Texture2D" uid="uid://c550t0oeuo40f" path="res://Designs/progress_bar_full.png" id="4_ng3jm"]
 [ext_resource type="Texture2D" uid="uid://rf3pxrsmmuam" path="res://Designs/progress_bar_fill_color.png" id="5_psc7h"]
 [ext_resource type="PackedScene" uid="uid://cj5n0uxan30h6" path="res://Enemies/slug.tscn" id="6_xyc3a"]
+[ext_resource type="Texture2D" uid="uid://dkpoil44x0trk" path="res://TileSets/futuristic puzzle folder/FUTURE_BLUE_BLOCK.png" id="7_wtgby"]
+[ext_resource type="Texture2D" uid="uid://cguqju2ey1nab" path="res://TileSets/futuristic puzzle folder/FUTURE_BLUE_BLOCK_flash.png" id="8_biyal"]
+[ext_resource type="Texture2D" uid="uid://bgnm3ww78abhe" path="res://TileSets/futuristic puzzle folder/FUTURE_GREEN_BLOCK.png" id="9_5wqjw"]
+[ext_resource type="Texture2D" uid="uid://dcgp85ws3nt22" path="res://TileSets/futuristic puzzle folder/FUTURE_GREEN_BLOCK_FLASH.png" id="10_ewgmo"]
+[ext_resource type="Texture2D" uid="uid://cdcl1sh8dj8ct" path="res://TileSets/futuristic puzzle folder/FUTURE_RED_BLOCK.png" id="11_4tqko"]
+[ext_resource type="Texture2D" uid="uid://dg5s6gis4y1g" path="res://TileSets/futuristic puzzle folder/FUTURE_RED_BLOCK_Flash.png" id="12_rsvlu"]
+[ext_resource type="Texture2D" uid="uid://bybcsd11pmlb1" path="res://TileSets/futuristic puzzle folder/FUTURE_YELLOW_BLOCK.png" id="13_2xjxh"]
+[ext_resource type="Texture2D" uid="uid://cuy6mxxawuwob" path="res://TileSets/futuristic puzzle folder/FUTURE_YELLOW_BLOCK_Flash.png" id="14_yaxxs"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_knh0r"]
 texture = ExtResource("1_wi70m")
@@ -239,6 +247,134 @@ texture = ExtResource("1_wi70m")
 [sub_resource type="TileSet" id="TileSet_oy4p7"]
 sources/0 = SubResource("TileSetAtlasSource_knh0r")
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_kplsb"]
+animations = [{
+"frames": [{
+"duration": 20.0,
+"texture": ExtResource("7_wtgby")
+}, {
+"duration": 2.0,
+"texture": ExtResource("8_biyal")
+}, {
+"duration": 2.0,
+"texture": ExtResource("7_wtgby")
+}, {
+"duration": 2.0,
+"texture": ExtResource("8_biyal")
+}, {
+"duration": 2.0,
+"texture": ExtResource("7_wtgby")
+}, {
+"duration": 2.0,
+"texture": ExtResource("9_5wqjw")
+}, {
+"duration": 2.0,
+"texture": ExtResource("10_ewgmo")
+}, {
+"duration": 2.0,
+"texture": ExtResource("9_5wqjw")
+}, {
+"duration": 2.0,
+"texture": ExtResource("10_ewgmo")
+}, {
+"duration": 2.0,
+"texture": ExtResource("9_5wqjw")
+}, {
+"duration": 2.0,
+"texture": ExtResource("11_4tqko")
+}, {
+"duration": 2.0,
+"texture": ExtResource("12_rsvlu")
+}, {
+"duration": 2.0,
+"texture": ExtResource("11_4tqko")
+}, {
+"duration": 2.0,
+"texture": ExtResource("12_rsvlu")
+}, {
+"duration": 2.0,
+"texture": ExtResource("11_4tqko")
+}, {
+"duration": 2.0,
+"texture": ExtResource("13_2xjxh")
+}, {
+"duration": 2.0,
+"texture": ExtResource("14_yaxxs")
+}, {
+"duration": 2.0,
+"texture": ExtResource("13_2xjxh")
+}, {
+"duration": 2.0,
+"texture": ExtResource("14_yaxxs")
+}, {
+"duration": 2.0,
+"texture": ExtResource("13_2xjxh")
+}, {
+"duration": 2.0,
+"texture": ExtResource("11_4tqko")
+}, {
+"duration": 2.0,
+"texture": ExtResource("12_rsvlu")
+}, {
+"duration": 2.0,
+"texture": ExtResource("11_4tqko")
+}, {
+"duration": 2.0,
+"texture": ExtResource("12_rsvlu")
+}, {
+"duration": 2.0,
+"texture": ExtResource("11_4tqko")
+}, {
+"duration": 2.0,
+"texture": ExtResource("7_wtgby")
+}, {
+"duration": 2.0,
+"texture": ExtResource("8_biyal")
+}, {
+"duration": 2.0,
+"texture": ExtResource("7_wtgby")
+}, {
+"duration": 2.0,
+"texture": ExtResource("8_biyal")
+}, {
+"duration": 2.0,
+"texture": ExtResource("7_wtgby")
+}, {
+"duration": 2.0,
+"texture": ExtResource("9_5wqjw")
+}, {
+"duration": 2.0,
+"texture": ExtResource("10_ewgmo")
+}, {
+"duration": 2.0,
+"texture": ExtResource("9_5wqjw")
+}, {
+"duration": 2.0,
+"texture": ExtResource("10_ewgmo")
+}, {
+"duration": 2.0,
+"texture": ExtResource("9_5wqjw")
+}, {
+"duration": 2.0,
+"texture": ExtResource("11_4tqko")
+}, {
+"duration": 2.0,
+"texture": ExtResource("12_rsvlu")
+}, {
+"duration": 2.0,
+"texture": ExtResource("11_4tqko")
+}, {
+"duration": 2.0,
+"texture": ExtResource("12_rsvlu")
+}, {
+"duration": 2.0,
+"texture": ExtResource("11_4tqko")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Level3Room3" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_vjl2g")
@@ -269,3 +405,9 @@ texture_progress = ExtResource("5_psc7h")
 
 [node name="Caveman" parent="." instance=ExtResource("6_xyc3a")]
 position = Vector2(304, 104)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(290, 236)
+scale = Vector2(4.87783, 4.67695)
+sprite_frames = SubResource("SpriteFrames_kplsb")
+frame_progress = 0.310483

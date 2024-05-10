@@ -1,0 +1,152 @@
+[gd_scene load_steps=10 format=3 uid="uid://xc8sobcobtm7"]
+
+[ext_resource type="Texture2D" uid="uid://dkpoil44x0trk" path="res://TileSets/futuristic puzzle folder/FUTURE_BLUE_BLOCK.png" id="1_v6ehx"]
+[ext_resource type="Texture2D" uid="uid://cguqju2ey1nab" path="res://TileSets/futuristic puzzle folder/FUTURE_BLUE_BLOCK_flash.png" id="2_hlk8o"]
+[ext_resource type="Texture2D" uid="uid://bgnm3ww78abhe" path="res://TileSets/futuristic puzzle folder/FUTURE_GREEN_BLOCK.png" id="3_w1l7r"]
+[ext_resource type="Texture2D" uid="uid://dcgp85ws3nt22" path="res://TileSets/futuristic puzzle folder/FUTURE_GREEN_BLOCK_FLASH.png" id="4_s20w4"]
+[ext_resource type="Texture2D" uid="uid://cdcl1sh8dj8ct" path="res://TileSets/futuristic puzzle folder/FUTURE_RED_BLOCK.png" id="5_6dd3g"]
+[ext_resource type="Texture2D" uid="uid://dg5s6gis4y1g" path="res://TileSets/futuristic puzzle folder/FUTURE_RED_BLOCK_Flash.png" id="6_7slpx"]
+[ext_resource type="Texture2D" uid="uid://bybcsd11pmlb1" path="res://TileSets/futuristic puzzle folder/FUTURE_YELLOW_BLOCK.png" id="7_6wf3p"]
+[ext_resource type="Texture2D" uid="uid://cuy6mxxawuwob" path="res://TileSets/futuristic puzzle folder/FUTURE_YELLOW_BLOCK_Flash.png" id="8_xw20t"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_meyam"]
+animations = [{
+"frames": [{
+"duration": 20.0,
+"texture": ExtResource("1_v6ehx")
+}, {
+"duration": 2.0,
+"texture": ExtResource("2_hlk8o")
+}, {
+"duration": 2.0,
+"texture": ExtResource("1_v6ehx")
+}, {
+"duration": 2.0,
+"texture": ExtResource("2_hlk8o")
+}, {
+"duration": 2.0,
+"texture": ExtResource("1_v6ehx")
+}, {
+"duration": 2.0,
+"texture": ExtResource("3_w1l7r")
+}, {
+"duration": 2.0,
+"texture": ExtResource("4_s20w4")
+}, {
+"duration": 2.0,
+"texture": ExtResource("3_w1l7r")
+}, {
+"duration": 2.0,
+"texture": ExtResource("4_s20w4")
+}, {
+"duration": 2.0,
+"texture": ExtResource("3_w1l7r")
+}, {
+"duration": 2.0,
+"texture": ExtResource("5_6dd3g")
+}, {
+"duration": 2.0,
+"texture": ExtResource("6_7slpx")
+}, {
+"duration": 2.0,
+"texture": ExtResource("5_6dd3g")
+}, {
+"duration": 2.0,
+"texture": ExtResource("6_7slpx")
+}, {
+"duration": 2.0,
+"texture": ExtResource("5_6dd3g")
+}, {
+"duration": 2.0,
+"texture": ExtResource("7_6wf3p")
+}, {
+"duration": 2.0,
+"texture": ExtResource("8_xw20t")
+}, {
+"duration": 2.0,
+"texture": ExtResource("7_6wf3p")
+}, {
+"duration": 2.0,
+"texture": ExtResource("8_xw20t")
+}, {
+"duration": 2.0,
+"texture": ExtResource("7_6wf3p")
+}, {
+"duration": 2.0,
+"texture": ExtResource("5_6dd3g")
+}, {
+"duration": 2.0,
+"texture": ExtResource("6_7slpx")
+}, {
+"duration": 2.0,
+"texture": ExtResource("5_6dd3g")
+}, {
+"duration": 2.0,
+"texture": ExtResource("6_7slpx")
+}, {
+"duration": 2.0,
+"texture": ExtResource("5_6dd3g")
+}, {
+"duration": 2.0,
+"texture": ExtResource("1_v6ehx")
+}, {
+"duration": 2.0,
+"texture": ExtResource("2_hlk8o")
+}, {
+"duration": 2.0,
+"texture": ExtResource("1_v6ehx")
+}, {
+"duration": 2.0,
+"texture": ExtResource("2_hlk8o")
+}, {
+"duration": 2.0,
+"texture": ExtResource("1_v6ehx")
+}, {
+"duration": 2.0,
+"texture": ExtResource("3_w1l7r")
+}, {
+"duration": 2.0,
+"texture": ExtResource("4_s20w4")
+}, {
+"duration": 2.0,
+"texture": ExtResource("3_w1l7r")
+}, {
+"duration": 2.0,
+"texture": ExtResource("4_s20w4")
+}, {
+"duration": 2.0,
+"texture": ExtResource("3_w1l7r")
+}, {
+"duration": 2.0,
+"texture": ExtResource("5_6dd3g")
+}, {
+"duration": 2.0,
+"texture": ExtResource("6_7slpx")
+}, {
+"duration": 2.0,
+"texture": ExtResource("5_6dd3g")
+}, {
+"duration": 2.0,
+"texture": ExtResource("6_7slpx")
+}, {
+"duration": 2.0,
+"texture": ExtResource("5_6dd3g")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="AnimatedBlock" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(109, 70)
+scale = Vector2(4.87783, 4.67695)
+sprite_frames = SubResource("SpriteFrames_meyam")
+frame_progress = 0.0538181

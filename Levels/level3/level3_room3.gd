@@ -4,6 +4,7 @@ extends Node2D
 func _ready():
 	$Player.global_transform.origin.x = 25
 	$Player.global_transform.origin.y = 155
+	$AnimatedSprite2D.play("default")
 
 
 func _process(_delta):
