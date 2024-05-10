@@ -8,7 +8,7 @@ var enemy_count = 1
 var puzzle_complete = false
 var is_returning = false
 
-var blue0Count = 16
+var blue0Count = 18
 
 var coin_puzzle_count = 10
 
