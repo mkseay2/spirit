@@ -6,7 +6,11 @@ var chase_player = false
 var player = null
 var health = 3
 var player_cool_down = false
-var delta = null
+
+func _ready():
+	if (Global.current_scene == 6) and (Global.enemy_count <= 0):
+		queue_free()
+
 
 func _physics_process(_delta):
 	if chase_player:
@@ -49,6 +53,6 @@ func _on_attack_cool_down_timer_timeout():
 	player_cool_down = false
 
 
-func _on_enemy_hitbox_area_entered(area):
+func _on_enemy_hitbox_area_entered(_area):
 	print("area entered")
 	process_player_attack()
