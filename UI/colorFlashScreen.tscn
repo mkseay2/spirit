@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://ke51gc8bjwof"]
+[gd_scene load_steps=4 format=3 uid="uid://ke51gc8bjwof"]
 
+[ext_resource type="Script" path="res://UI/colorFlashScreen.gd" id="1_3hd02"]
 [ext_resource type="Texture2D" uid="uid://bdnmo2tc2flt7" path="res://Designs/ghost.jpeg" id="1_tebig"]
 [ext_resource type="Texture2D" uid="uid://8aytdomfh034" path="res://TileSets/futuristicSimonSays/COLOR_SIMON_SAYS.png" id="2_7lg1e"]
 
@@ -10,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_3hd02")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -69,3 +71,24 @@ offset_right = 63.0
 offset_bottom = 87.0
 scale = Vector2(1.45457, 1.49004)
 text = "Check"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Control"]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 74.0
+offset_bottom = 49.0
+
+[connection signal="pressed" from="TextureRect/Red Button" to="." method="_on_red_button_pressed"]
+[connection signal="pressed" from="TextureRect/Green Button" to="." method="_on_green_button_pressed"]
+[connection signal="pressed" from="TextureRect/Blue Button" to="." method="_on_blue_button_pressed"]
+[connection signal="pressed" from="TextureRect/Yellow Button" to="." method="_on_yellow_button_pressed"]
+[connection signal="pressed" from="TextureRect/Check Button" to="." method="_on_check_button_pressed"]

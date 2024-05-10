@@ -3,11 +3,12 @@
 [ext_resource type="Script" path="res://Levels/level2/level2_room1.gd" id="1_4lnrg"]
 [ext_resource type="Texture2D" uid="uid://bg753sgvmfw0r" path="res://TileSets/6_floors.png" id="1_xrcms"]
 [ext_resource type="PackedScene" uid="uid://dfi3aa0asnuis" path="res://PlayerCharacter/player.tscn" id="3_84rwk"]
-[ext_resource type="Texture2D" uid="uid://d2wpx5avdtje4" path="res://TileSets/2_indoors.png" id="3_e8ca0"]
+[ext_resource type="Texture2D" path="res://TileSets/2_indoors.png" id="3_e8ca0"]
 [ext_resource type="Texture2D" uid="uid://c550t0oeuo40f" path="res://Designs/progress_bar_full.png" id="4_6wlh3"]
 [ext_resource type="Texture2D" uid="uid://rf3pxrsmmuam" path="res://Designs/progress_bar_fill_color.png" id="5_buf6c"]
 [ext_resource type="PackedScene" uid="uid://duxorykmxxrqa" path="res://Enemies/gunner.tscn" id="6_2c4pi"]
-[ext_resource type="PackedScene" uid="uid://cgvyw6ssgya2b" path="res://UI/Blue_X.tscn" id="8_ahpqy"]
+
+[ext_resource type="PackedScene" uid="uid://ryhuppphoqak" path="res://UI/Blue_X.tscn" id="8_ahpqy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d3j57"]
 texture = ExtResource("1_xrcms")

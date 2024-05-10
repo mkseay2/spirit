@@ -1,4 +1,5 @@
-[gd_scene load_steps=6 format=3 uid="uid://cgvyw6ssgya2b"]
+
+[gd_scene load_steps=6 format=3 uid="uid://ryhuppphoqak"]
 
 [ext_resource type="Script" path="res://UI/Blue_X.gd" id="1_v4f8y"]
 [ext_resource type="Texture2D" uid="uid://bdmka5ur1xb0f" path="res://TileSets/BLUE_O_.png" id="2_6hpru"]
