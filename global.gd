@@ -6,6 +6,7 @@ var player_health = 100
 #var player_alive = true
 var enemy_count = 1
 var puzzle_complete = false
+var is_returning = false
 
 var coin_puzzle_count = 10
 
@@ -30,15 +31,19 @@ func process_enemy_death():
 func process_player_death():
 	player_health = 100
 	enemy_count = 1
+	is_returning = false
 	
 	if (current_scene == 1) or (current_scene == 2) or (current_scene == 3):
+		is_returning = false
 		current_scene = 1
 		get_tree().change_scene_to_file("res://Levels/level1/level1_room1.tscn")
 	elif (current_scene == 4) or (current_scene == 5) or (current_scene == 6):
+		is_returning = false
 		current_scene = 4
 		get_tree().change_scene_to_file("res://Levels/level2/level2_room1.tscn")
 	elif (current_scene == 7) or (current_scene == 8) or (current_scene == 9):
 		current_scene = 7
+		is_returning = false
 		get_tree().change_scene_to_file("res://Levels/level3/level3_room1.tscn")
 
 
