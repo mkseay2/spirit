@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://de0f74n4hxhso"]
+[gd_scene load_steps=6 format=3 uid="uid://cgvyw6ssgya2b"]
 
 [ext_resource type="Script" path="res://UI/Blue_X.gd" id="1_v4f8y"]
 [ext_resource type="Texture2D" uid="uid://bdmka5ur1xb0f" path="res://TileSets/BLUE_O_.png" id="2_6hpru"]
@@ -16,7 +16,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
 "
 
