@@ -2,9 +2,12 @@ extends Node2D
 
 
 func _ready():
-	$Player.global_transform.origin.x = 25
-	$Player.global_transform.origin.y = 155
-
+	if (Global.is_returning == true):
+		$Player.global_transform.origin.x = 250
+		$Player.global_transform.origin.y = 250
+	else:
+		$Player.global_transform.origin.x = 25
+		$Player.global_transform.origin.y = 155
 
 func _process(_delta):
 	change_scene()
@@ -12,7 +15,7 @@ func _process(_delta):
 
 
 func _on_room_2_transition_body_entered(body):
-	if body.has_method("player") and (Global.enemy_count <= 0):
+	if body.has_method("player") and (Global.enemy_count <= 0) and (Global.puzzle_complete == true):
 		Global.transition_scene = true
 
 

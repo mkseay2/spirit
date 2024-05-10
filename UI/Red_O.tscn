@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://bd0jp438fc07u"]
+
+[ext_resource type="Script" path="res://UI/Red_O.gd" id="1_1kyh2"]
+[ext_resource type="Texture2D" uid="uid://dkeumjo7gu7iu" path="res://TileSets/RED_X_.png" id="2_8f1r3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h7kb1"]
+
+[node name="RedO" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1kyh2")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(1.6317, 1.63501)
+texture = ExtResource("2_8f1r3")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(1.18021, 1.1727)
+shape = SubResource("CircleShape2D_h7kb1")

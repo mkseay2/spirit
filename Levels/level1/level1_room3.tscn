@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c10hoyrk2h03y" path="res://Enemies/caveman.tscn" id="4_u0u5p"]
 [ext_resource type="Texture2D" uid="uid://c550t0oeuo40f" path="res://Designs/progress_bar_full.png" id="5_6bacu"]
 [ext_resource type="Texture2D" uid="uid://rf3pxrsmmuam" path="res://Designs/progress_bar_fill_color.png" id="6_p2mpa"]
-[ext_resource type="PackedScene" uid="uid://b71t4v3ibi42m" path="res://UI/coin.tscn" id="7_x8iec"]
+[ext_resource type="PackedScene" uid="uid://c4pb3wcndrt8r" path="res://UI/coin.tscn" id="7_x8iec"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v8a4w"]
 texture = ExtResource("1_3xbld")

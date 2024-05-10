@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://de0f74n4hxhso"]
+
+[ext_resource type="Script" path="res://UI/Blue_X.gd" id="1_v4f8y"]
+[ext_resource type="Texture2D" uid="uid://bdmka5ur1xb0f" path="res://TileSets/BLUE_O_.png" id="2_6hpru"]
+[ext_resource type="Script" path="res://UI/Blue0Area2D.gd" id="3_qkqsg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_op7qg"]
+
+[sub_resource type="GDScript" id="GDScript_oasgv"]
+script/source = "extends CollisionShape2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
+[node name="BlueX" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_v4f8y")
+
+[node name="blue_x" type="Sprite2D" parent="."]
+scale = Vector2(1.55521, 1.56084)
+texture = ExtResource("2_6hpru")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("3_qkqsg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(0.912015, 0.917955)
+shape = SubResource("CircleShape2D_op7qg")
+script = SubResource("GDScript_oasgv")

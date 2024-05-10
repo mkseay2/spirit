@@ -19,7 +19,20 @@ var yellowFlag = 0
 @onready var redCountLabel = $CanvasLayer/Control/RedLabel
 @onready var yellowCountLabel = $CanvasLayer/Control/YellowLabel
 @onready var pressEnterLabel = $CanvasLayer/Control/pressEnter
-
+var puzzle_complete = false
+func _process_failed_puzzle():
+	if Global.enemy_count == 1:
+		get_tree().change_scene_to_file("res://Levels/level3/level3_room1.tscn")
+	else:
+		get_tree().change_scene_to_file("res://Levels/level3/level3_room1.tscn")
+func _process_complete_puzzle():
+	if Global.enemy_count == 1:
+		get_tree().change_scene_to_file("res://Levels/level3/level3_room1.tscn")
+		Global.process_puzzle_complete()
+	else:
+		get_tree().change_scene_to_file("res://Levels/level3/level3_room1.tscn")
+		Global.process_puzzle_complete()
+		
 
 func updateBlueCount(value):
 	blueCount += value
@@ -154,6 +167,7 @@ func _on_0_button_pressed():
 
 
 func _on_check_button_pressed():
+	Global.is_returning = true
 	if blueFlag == 1:
 		if blueCount == 8:
 			blueCountLabel.text = "Blue: Good"
@@ -167,6 +181,8 @@ func _on_check_button_pressed():
 			greenCount = 0
 			yellowCount = 0
 			redCount = 0
+			await get_tree().create_timer(2).timeout
+			_process_failed_puzzle()
 	elif greenFlag == 1:
 		if greenCount == 4:
 			greenCountLabel.text = "Green: Good"
@@ -181,6 +197,8 @@ func _on_check_button_pressed():
 			greenCount = 0
 			yellowCount = 0
 			redCount = 0
+			await get_tree().create_timer(2).timeout
+			_process_failed_puzzle()
 	elif redFlag == 1:
 		if redCount == 6:
 			redCountLabel.text = "Red: Good"
@@ -195,14 +213,17 @@ func _on_check_button_pressed():
 			greenCount = 0
 			yellowCount = 0
 			redCount = 0
+			await get_tree().create_timer(2).timeout
+			_process_failed_puzzle()
 	elif yellowFlag == 1:
 		if yellowCount == 2:
 			yellowCountLabel.text = "Yellow: Good"
 			yellowFlag = 0
 			pressEnterLabel.text = "Press Enter"
 			levelComplete = 1
+			puzzle_complete = true
 			if levelComplete == 1:
-				get_tree().change_scene_to_file("res://Levels/level3/level3_room1.tscn")
+				_process_complete_puzzle()
 		elif yellowCount != 2:
 			yellowCount.text = "Yellow: Nope"
 			yellowCount = 0
@@ -212,4 +233,6 @@ func _on_check_button_pressed():
 			greenCount = 0
 			yellowCount = 0
 			redCount = 0
+			await get_tree().create_timer(2).timeout
+			_process_failed_puzzle()
 
