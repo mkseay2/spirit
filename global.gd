@@ -64,3 +64,5 @@ func process_blue_inter():
 	if blue0Count <= 0:
 		puzzle_complete = true
 		print("good")
+
+
