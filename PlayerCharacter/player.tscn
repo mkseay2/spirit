@@ -219,7 +219,7 @@ speed_scale = 1.4
 
 [node name="CollisionLegs" type="CollisionShape2D" parent="."]
 y_sort_enabled = true
-position = Vector2(3, -4)
+position = Vector2(0, -4)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_70tj8")
 
