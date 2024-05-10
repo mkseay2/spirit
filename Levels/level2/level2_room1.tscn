@@ -1,11 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://dcme805ocri6p"]
+[gd_scene load_steps=13 format=3 uid="uid://dcme805ocri6p"]
 
 [ext_resource type="Script" path="res://Levels/level2/level2_room1.gd" id="1_4lnrg"]
 [ext_resource type="Texture2D" uid="uid://bg753sgvmfw0r" path="res://TileSets/6_floors.png" id="1_xrcms"]
 [ext_resource type="PackedScene" uid="uid://dfi3aa0asnuis" path="res://PlayerCharacter/player.tscn" id="3_84rwk"]
+[ext_resource type="Texture2D" uid="uid://d2wpx5avdtje4" path="res://TileSets/2_indoors.png" id="3_e8ca0"]
 [ext_resource type="Texture2D" uid="uid://c550t0oeuo40f" path="res://Designs/progress_bar_full.png" id="4_6wlh3"]
 [ext_resource type="Texture2D" uid="uid://rf3pxrsmmuam" path="res://Designs/progress_bar_fill_color.png" id="5_buf6c"]
 [ext_resource type="PackedScene" uid="uid://duxorykmxxrqa" path="res://Enemies/gunner.tscn" id="6_2c4pi"]
+[ext_resource type="PackedScene" uid="uid://bd0jp438fc07u" path="res://UI/Red_O.tscn" id="7_utwmg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d3j57"]
 texture = ExtResource("1_xrcms")
@@ -18,8 +20,14 @@ texture = ExtResource("1_xrcms")
 1:9/size_in_atlas = Vector2i(4, 4)
 1:9/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5uxq7"]
+texture = ExtResource("3_e8ca0")
+14:0/size_in_atlas = Vector2i(2, 2)
+14:0/0 = 0
+
 [sub_resource type="TileSet" id="TileSet_pv2mt"]
 sources/0 = SubResource("TileSetAtlasSource_d3j57")
+sources/1 = SubResource("TileSetAtlasSource_5uxq7")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uyws1"]
 size = Vector2(34, 106)
@@ -31,7 +39,10 @@ script = ExtResource("1_4lnrg")
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_pv2mt")
 format = 2
+layer_0/name = "Floor"
 layer_0/tile_data = PackedInt32Array(65550, 458752, 10, 14, 458752, 10, 196622, 458752, 10, 327694, 458752, 10, 458766, 458752, 10, 720910, 458752, 10, 851982, 458752, 10, 983054, 458752, 10, 1048590, 458752, 10, 589838, 458752, 10, 65537, 65536, 9, 65541, 65536, 9, 65545, 65536, 9, 65546, 65536, 9, 327690, 65536, 9, 327686, 65536, 9, 327682, 65536, 9, 327681, 65536, 9, 589825, 65536, 9, 589829, 65536, 9, 589833, 65536, 9, 589834, 65536, 9, 851969, 65536, 9, 851973, 65536, 9, 851977, 65536, 9, 851978, 65536, 9, 983050, 65536, 9, 983046, 65536, 9, 983042, 65536, 9, 983041, 65536, 9, 1179649, 65536, 9, 1179653, 65536, 9, 1179657, 65536, 9, 1179658, 65536, 9, 1179662, 458752, 10, 1245198, 458752, 10, 65554, 65536, 9, 65558, 65536, 9, 327698, 65536, 9, 327702, 65536, 9, 589842, 65536, 9, 589846, 65536, 9, 851986, 65536, 9, 851990, 65536, 9, 1114130, 65536, 9, 1179666, 65536, 9, 1114134, 65536, 9, 1179670, 65536, 9, 1179674, 65536, 9, 917530, 65536, 9, 655386, 65536, 9, 393242, 65536, 9, 65562, 65536, 9, 131098, 65536, 9, 65566, 65536, 9, 327710, 65536, 9, 589854, 65536, 9, 851998, 65536, 9, 1114142, 65536, 9, 1179678, 65536, 9)
+layer_1/name = "Puzzle"
+layer_1/tile_data = PackedInt32Array(458764, 917505, 0, 458766, 917505, 0, 458768, 917505, 0, 458770, 917505, 0, 458774, 917505, 0, 458776, 917505, 0, 589849, 917505, 0, 720921, 917505, 0, 851993, 917505, 0, 917527, 917505, 0, 1048595, 917505, 0, 1048593, 917505, 0, 1048591, 917505, 0, 1048589, 917505, 0, 1048587, 917505, 0, 851982, 917505, 0, 851985, 917505, 0, 655374, 917505, 0, 655376, 917505, 0, 655378, 917505, 0, 655382, 917505, 0, 589834, 917505, 0, 720906, 917505, 0)
 metadata/_edit_group_ = true
 
 [node name="Player" parent="." instance=ExtResource("3_84rwk")]
@@ -61,5 +72,11 @@ texture_progress = ExtResource("5_buf6c")
 
 [node name="Caveman" parent="." instance=ExtResource("6_2c4pi")]
 position = Vector2(176, 80)
+
+[node name="RedO" parent="." instance=ExtResource("7_utwmg")]
+offset_left = 115.0
+offset_top = 218.0
+offset_right = 115.0
+offset_bottom = 218.0
 
 [connection signal="body_entered" from="Room2_Transition" to="." method="_on_room_2_transition_body_entered"]

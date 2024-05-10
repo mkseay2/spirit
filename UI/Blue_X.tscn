@@ -15,10 +15,11 @@ grow_vertical = 2
 script = ExtResource("1_v4f8y")
 
 [node name="blue_x" type="Sprite2D" parent="."]
+scale = Vector2(1.55521, 1.56084)
 texture = ExtResource("2_6hpru")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-scale = Vector2(0.578162, 0.631508)
+scale = Vector2(0.912015, 0.917955)
 shape = SubResource("CircleShape2D_op7qg")
