@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://de0f74n4hxhso"]
+
+[ext_resource type="Script" path="res://UI/Blue_X.gd" id="1_v4f8y"]
+[ext_resource type="Texture2D" uid="uid://bdmka5ur1xb0f" path="res://TileSets/BLUE_O_.png" id="2_6hpru"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_op7qg"]
+
+[node name="BlueX" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_v4f8y")
+
+[node name="blue_x" type="Sprite2D" parent="."]
+texture = ExtResource("2_6hpru")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(0.578162, 0.631508)
+shape = SubResource("CircleShape2D_op7qg")
