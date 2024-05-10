@@ -21,3 +21,7 @@ func change_scene():
 		if Global.current_scene == 6:
 			get_tree().change_scene_to_file("res://Levels/level3/level3_room1.tscn")
 			Global.finish_change_scene(7)
+
+
+func _on_door_body_entered(body):
+	pass # Replace with function body.

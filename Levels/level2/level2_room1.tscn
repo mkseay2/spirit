@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://c550t0oeuo40f" path="res://Designs/progress_bar_full.png" id="4_6wlh3"]
 [ext_resource type="Texture2D" uid="uid://rf3pxrsmmuam" path="res://Designs/progress_bar_fill_color.png" id="5_buf6c"]
 [ext_resource type="PackedScene" uid="uid://duxorykmxxrqa" path="res://Enemies/gunner.tscn" id="6_2c4pi"]
-[ext_resource type="PackedScene" uid="uid://de0f74n4hxhso" path="res://UI/Blue_X.tscn" id="8_ahpqy"]
+[ext_resource type="PackedScene" uid="uid://cgvyw6ssgya2b" path="res://UI/Blue_X.tscn" id="8_ahpqy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_d3j57"]
 texture = ExtResource("1_xrcms")
