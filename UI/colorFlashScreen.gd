@@ -40,11 +40,9 @@ func _on_yellow_button_pressed():
 func _on_check_button_pressed():
 	if player_input == correct_sequence:
 		sequenceCorrect.text = "Correct"
-		puzzle_complete = true
 		await get_tree().create_timer(2).timeout
 		_process_complete_puzzle()
 	else:
 		sequenceCorrect.text = "Incorrect"
-		puzzle_complete = false
 		await get_tree().create_timer(2).timeout
 		_process_failed_puzzle()

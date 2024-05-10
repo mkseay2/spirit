@@ -13,7 +13,7 @@ func _process(_delta):
 
 
 func change_scene():
-	if (Global.enemy_count <= 0):
+	if (Global.enemy_count <= 0) && (Global.puzzle_complete == true):
 		get_tree().change_scene_to_file("res://UI/game_over.tscn")
 
 
