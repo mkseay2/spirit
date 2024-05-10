@@ -2,8 +2,12 @@ extends Node2D
 
 
 func _ready():
-	$Player.global_transform.origin.x = 25
-	$Player.global_transform.origin.y = 155
+	if (Global.puzzle_complete == true):
+		$Player.global_transform.origin.x = 176
+		$Player.global_transform.origin.y = 112
+	else:
+		$Player.global_transform.origin.x = 25
+		$Player.global_transform.origin.y = 155
 
 
 func _process(_delta):
@@ -24,4 +28,5 @@ func change_scene():
 
 
 func _on_door_body_entered(body):
-	pass # Replace with function body.
+	if body.has_method("player") and (Global.puzzle_complete == false):
+		get_tree().change_scene_to_file("res://Levels/level2/puzzle_maze/maze_room1.tscn")

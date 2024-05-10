@@ -1,12 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://csspstegubi7i"]
+[gd_scene load_steps=10 format=3 uid="uid://drf7wx8fady1j"]
 
-[ext_resource type="Texture2D" uid="uid://bg753sgvmfw0r" path="res://TileSets/6_floors.png" id="1_cs21k"]
-[ext_resource type="Script" path="res://Levels/level2/puzzle_maze/maze_room1.gd" id="1_ohya4"]
-[ext_resource type="Texture2D" uid="uid://dq248cbwuqq7h" path="res://TileSets/4_buildings.png" id="2_gvdqj"]
-[ext_resource type="PackedScene" uid="uid://dfi3aa0asnuis" path="res://PlayerCharacter/player.tscn" id="4_5u8my"]
+[ext_resource type="Texture2D" uid="uid://bg753sgvmfw0r" path="res://TileSets/6_floors.png" id="1_gecds"]
+[ext_resource type="Script" path="res://Levels/level2/puzzle_maze/maze_room5.gd" id="1_iijgj"]
+[ext_resource type="Texture2D" uid="uid://dq248cbwuqq7h" path="res://TileSets/4_buildings.png" id="2_2ahk7"]
+[ext_resource type="PackedScene" uid="uid://dfi3aa0asnuis" path="res://PlayerCharacter/player.tscn" id="4_m8cqd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t37y0"]
-texture = ExtResource("1_cs21k")
+texture = ExtResource("1_gecds")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -194,7 +194,7 @@ texture = ExtResource("1_cs21k")
 5:13/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p332h"]
-texture = ExtResource("2_gvdqj")
+texture = ExtResource("2_2ahk7")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -680,8 +680,8 @@ size = Vector2(34, 66)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rtyx8"]
 size = Vector2(34, 66)
 
-[node name="MazeRoom1" type="Node2D"]
-script = ExtResource("1_ohya4")
+[node name="MazeRoom5" type="Node2D"]
+script = ExtResource("1_iijgj")
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = SubResource("TileSet_5cpr5")
@@ -713,16 +713,8 @@ shape = SubResource("RectangleShape2D_87v04")
 position = Vector2(319, 103)
 shape = SubResource("RectangleShape2D_rtyx8")
 
-[node name="Label" type="Label" parent="."]
-offset_left = 176.0
-offset_top = 72.0
-offset_right = 267.0
-offset_bottom = 104.0
-theme_override_font_sizes/font_size = 23
-text = "ROOM 1"
-
-[node name="Player" parent="." instance=ExtResource("4_5u8my")]
-position = Vector2(216, 200)
+[node name="Player" parent="." instance=ExtResource("4_m8cqd")]
+position = Vector2(216, 176)
 
 [connection signal="body_entered" from="door1" to="." method="_on_door_1_body_entered"]
 [connection signal="body_entered" from="door2" to="." method="_on_door_2_body_entered"]

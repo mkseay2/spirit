@@ -527,7 +527,7 @@ layer_3/name = "door"
 layer_3/tile_data = PackedInt32Array(10, 1179649, 1, 65546, 1179649, 2, 131082, 1179649, 3, 11, 1245185, 1, 65547, 1245185, 2, 131083, 1245185, 3)
 
 [node name="Player" parent="." instance=ExtResource("3_dkahi")]
-position = Vector2(32, 128)
+position = Vector2(40, 160)
 
 [node name="Collisions" type="StaticBody2D" parent="."]
 
