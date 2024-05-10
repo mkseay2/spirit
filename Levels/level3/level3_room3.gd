@@ -15,3 +15,7 @@ func _process(_delta):
 func change_scene():
 	if (Global.enemy_count <= 0):
 		get_tree().change_scene_to_file("res://UI/game_over.tscn")
+
+
+func _on_area_2d_body_entered(body):
+	pass # Replace with function body.
