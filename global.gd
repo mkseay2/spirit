@@ -8,6 +8,8 @@ var enemy_count = 1
 var puzzle_complete = false
 var is_returning = false
 
+var blue0Count = 16
+
 var coin_puzzle_count = 10
 
 
@@ -56,3 +58,9 @@ func process_coin_collection():
 	if (coin_puzzle_count <= 0):
 		puzzle_complete = true
 	print("coin puzzle count: ", coin_puzzle_count)
+
+func process_blue_inter():
+	blue0Count = blue0Count - 1
+	if blue0Count <= 0:
+		puzzle_complete = true
+		print("good")
