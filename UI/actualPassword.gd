@@ -35,21 +35,25 @@ func _process_complete_puzzle():
 		
 
 func updateBlueCount(value):
+	blueCount = 0
 	blueCount += value
 	blueCountLabel.text = "Blue: %d" % blueCount
 
 
 func updateRedCount(value):
+	redCount = 0
 	redCount += value
 	redCountLabel.text = "Red: %d" % redCount
 
 
 func updateGreenCount(value):
+	greenCount = 0
 	greenCount += value
 	greenCountLabel.text = "Green: %d" % greenCount
 
 
 func updateYellowCount(value):
+	yellowCount = 0
 	yellowCount += value
 	yellowCountLabel.text = "Yellow: %d" % yellowCount
 
