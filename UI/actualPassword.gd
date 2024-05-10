@@ -25,13 +25,12 @@ func _process_failed_puzzle():
 		get_tree().change_scene_to_file("res://Levels/level3/level3_room1.tscn")
 	else:
 		get_tree().change_scene_to_file("res://Levels/level3/level3_room1.tscn")
-		queue_free()
 func _process_complete_puzzle():
 	if Global.enemy_count == 1:
 		get_tree().change_scene_to_file("res://Levels/level3/level3_room1.tscn")
 	else:
 		get_tree().change_scene_to_file("res://Levels/level3/level3_room1.tscn")
-		queue_free()
+		
 
 func updateBlueCount(value):
 	blueCount += value
