@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://bd0jp438fc07u"]
+[gd_scene load_steps=4 format=3 uid="uid://o58n5qk5r7cm"]
 
 [ext_resource type="Script" path="res://UI/Red_O.gd" id="1_1kyh2"]
-[ext_resource type="Texture2D" uid="uid://dkeumjo7gu7iu" path="res://TileSets/RED_X_.png" id="2_8f1r3"]
+[ext_resource type="Texture2D" path="res://TileSets/RED_X_.png" id="2_8f1r3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_h7kb1"]
 
