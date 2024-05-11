@@ -50,10 +50,18 @@ text = "Exit Game"
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
 offset_left = 8.0
-offset_top = 136.0
+offset_top = 118.0
 offset_right = 272.0
-offset_bottom = 176.0
+offset_bottom = 163.0
 theme_override_font_sizes/font_size = 9
 text = "You may use the arrow keys or WASD keys to move. 
 The space bar or J key may be used to attack.
 Enter can be used to interact with important items"
+
+[node name="Label" type="Label" parent="Label"]
+offset_left = 116.0
+offset_top = -114.0
+offset_right = 176.0
+offset_bottom = -86.0
+theme_override_font_sizes/font_size = 20
+text = "SPIRIT"
