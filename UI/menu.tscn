@@ -55,4 +55,5 @@ offset_right = 272.0
 offset_bottom = 176.0
 theme_override_font_sizes/font_size = 9
 text = "You may use the arrow keys or WASD keys to move. 
-The space bar or J key may be used to attack."
+The space bar or J key may be used to attack.
+Enter can be used to interact with important items"
